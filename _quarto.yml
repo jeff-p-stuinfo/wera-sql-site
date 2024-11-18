@@ -3,24 +3,21 @@ project:
   output-dir: docs
   
 website:
-  title: "MY WEB SITE"
+  title: "WERA 2024 Workshop - Intro to SQL for Education"
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: Workshop Home
       - projects.qmd
     tools:
-      - icon: twitter
-        href: https://twitter.com/
       - icon: github
-        href: https://github.com/YOURUSERNAME/YOURREPO
+        href: https://github.com/jeff-p-stuinfo/wera-sql-site
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"
-    left: "&copy; Copyright 2023, YOUR NAME"
 
 format:
   html:
-    theme: cerulean
+    theme: sandstone
     toc: true
 
 editor: source
