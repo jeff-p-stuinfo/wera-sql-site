@@ -406,7 +406,6 @@
 <h2>As you come in</h2>
 <ul>
 <li>Make sure you have access to the presentation. <a href="https://github.com/jeff-p-stuinfo/wera_sql_24">https://github.com/jeff-p-stuinfo/wera_sql_24</a></li>
-<li>Connect to the database <a href="#/12">(click here for instructions)</a></li>
 </ul>
 </section>
 <section id="introductions" class="slide level2 smaller scrollable">
@@ -423,7 +422,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="agenda-and-structure" class="slide level2">
+<section id="agenda-and-structure" class="slide level2 smaller scrolling">
 <h2>Agenda and Structure</h2>
 <div class="smaller">
 <ul>
@@ -459,7 +458,7 @@
 <ul>
 <li><p>W3 Schools online tutorials (https://www.w3schools.com/)</p></li>
 <li><p>Geeks For Geeks (https://www.geeksforgeeks.org)</p></li>
-<li><p>Example Google Search “W3Schools SQL how to execute based off a condition.” <img data-src="W3Schools_Example_Search.png" alt="Example"></p></li>
+<li><p>Example Google Search “W3Schools SQL how to execute based off a condition.” <img data-src="assets/images/W3Schools_Example_Search.png" alt="Example"></p></li>
 </ul>
 </section>
 <section id="what-is-sql" class="slide level2 smaller">
@@ -552,7 +551,7 @@
 <h2>Steps</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6dc39410" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_642cf049" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -568,13 +567,33 @@
 <li><p>Now connect to the data by going to <a href="https://github.com/jeff-p-stuinfo/wera_sql_24" class="uri">https://github.com/jeff-p-stuinfo/wera_sql_24</a></p></li>
 <li><p>Click on the file labeled “wera-db.duckdb” and download it.</p></li>
 <li><p>Open DBeaver.</p></li>
+<li><p>In the upper left corner, click on the blue plug with the green plus side. <img data-src="assets/images/dbeaver_step8.png"></p></li>
+<li><p>In the popup that appears, type in “duck”, and click on the only option. Then click “next”<br>
+<img data-src="assets/images/dbeaver_step9.png"></p></li>
+<li><p>Click on “Open” and navigate to where you downloaded “wera-db.duckdb” and select that file. Then click Finish.</p></li>
+</ol>
+</section>
+<section id="steps-for-shell" class="slide level2 smaller scrollable">
+<h2>Steps For Shell</h2>
+<ol type="1">
+<li><p>Follow steps 1 through 6 on the DBeaver instructions.</p></li>
+<li><p>Go to your web browser of choice (e.g., Chrome, Firefox, Edge)</p></li>
+<li><p>Go to <a href="https://shell.duckdb.org/" class="uri">https://shell.duckdb.org/</a>.</p></li>
+<li><p>Enter the following one at a time.</p></li>
+<li><p>Go to DBeaver Community Download: <a href="https://dbeaver.io/download/" class="uri">https://dbeaver.io/download/</a></p></li>
+<li><p>Download it.</p></li>
+<li><p>Open it on your computer.</p></li>
+<li><p>Only install it for your account OR just unzip it.&nbsp; 4a. You will need to download the JDBC driver.Please do so.</p></li>
+<li><p>Now connect to the data by going to <a href="https://github.com/jeff-p-stuinfo/wera_sql_24" class="uri">https://github.com/jeff-p-stuinfo/wera_sql_24</a></p></li>
+<li><p>Click on the file labeled “wera-db.duckdb” and download it.</p></li>
+<li><p>Open DBeaver.</p></li>
 <li><p>In the upper left corner, click on the blue plug with the green plus side. <img data-src="dbeaver_step8.png"></p></li>
 <li><p>In the popup that appears, type in “duck”, and click on the only option. Then click “next”<br>
 <img data-src="dbeaver_step9.png"></p></li>
 <li><p>Click on “Open” and navigate to where you downloaded “wera-db.duckdb” and select that file. Then click Finish.</p></li>
 </ol>
 </section>
-<section id="steps-for-shell" class="slide level2 smaller scrollable">
+<section id="steps-for-shell-1" class="slide level2 smaller scrollable">
 <h2>Steps For Shell</h2>
 <ol type="1">
 <li>Follow steps 1 through 6 on the DBeaver instructions.</li>
@@ -641,14 +660,47 @@
 </div>
 </div>
 </div>
-</section>
-<section id="exercise-2-select-and-from" class="slide level2">
-<h2>Exercise 2 : Select and From</h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Exercise 2 : Select and From (Part 1)</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_97f2de1f" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_2e99f8ec" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Select all the rows and columns from the enrollment table.</li>
+</ol>
+<div class="footer">
+<p>It would be a real shame if somebody left a handy <a href="https://www.w3schools.com/SQL/sql_select.asp">select syntax reference link</a> here.</p>
+</div>
+</section>
+<section id="exercise-2-select-and-from-part-2" class="slide level2">
+<h2>Exercise 2 : Select and From (Part 2)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_c8c31c8d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Select all the rows and columns from the enrollment table.</li>
+<li>Which school years are included in the enrollment data set?</li>
+</ol>
+<div class="footer">
+<p>Wait, this is the same <a href="https://www.w3schools.com/SQL/sql_select.asp">select syntax reference link</a> as the last slide!</p>
+</div>
+</section>
+<section id="exercise-2-select-and-from-part-3" class="slide level2">
+<h2>Exercise 2 : Select and From (Part 3)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_afe59cce" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
@@ -657,6 +709,9 @@
 <li>Which school years are included in the enrollment data set?</li>
 <li>SELECT all districts and schools from enrollment without duplicates</li>
 </ol>
+<div class="footer">
+<p>This link seems DISTINCT from the other two <a href="https://www.w3schools.com/SQL/sql_distinct.asp">select syntax reference links</a>.</p>
+</div>
 </section>
 <section id="exercise-2-answers" class="slide level2">
 <h2>Exercise 2 : Answers</h2>
@@ -674,13 +729,13 @@
 <span id="cb4-12"><a></a>       ,SchoolName </span>
 <span id="cb4-13"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="footer">
-<p>Don’t worry too much about how your code looks. As long as it runs and you can read it later, it’s fine.</p>
+<p>Don’t worry too much about how your code looks. As long as it runs and you can read it later, it’s fine. If you want very well organized code that can take some time and effort. Jeff recommends giving it to Cameron to write.</p>
 </div>
 </section>
 <section id="where-statements" class="slide level2 smaller scrollable">
 <h2>WHERE Statements</h2>
 <ul>
-<li><p>WHERE statements tell the query what filter conditions you want. WHERE clauses always come after the FROM Clause.</p>
+<li>WHERE statements tell the query what filter conditions you want. WHERE clauses always come after the FROM Clause.
 <ul>
 <li>Number columns can be filtered with comparison operators =, &gt;, &lt;, !=</li>
 </ul>
@@ -696,7 +751,7 @@
 <div class="sourceCode" id="cb6"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a></a><span class="kw">SELECT</span> <span class="op">*</span></span>
 <span id="cb6-2"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment <span class="kw">AS</span> e</span>
 <span id="cb6-3"><a></a> <span class="kw">WHERE</span> e.SchoolName <span class="kw">LIKE</span> <span class="st">'%Jefferson%'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>The ‘%’ character is a wildcard. It means “anything can go where this character is”.</p></li>
+<li>The ‘%’ character is a wildcard. It means “anything can go where this character is”.</li>
 </ul>
 </section>
 <section id="where-statements-part-2" class="slide level2">
@@ -728,14 +783,33 @@
 <span id="cb9-2"><a></a><span class="kw">FROM</span> main.enrollment</span>
 <span id="cb9-3"><a></a><span class="kw">WHERE</span> SchoolName <span class="kw">IS</span> <span class="kw">NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>You can also filter something <strong>IS NOT NULL</strong></li>
+<li>You can also filter something <strong>IS NOT NULL</strong> &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a></a><span class="kw">SELECT</span> DistrictName</span>
-<span id="cb10-2"><a></a><span class="kw">FROM</span> main.enrollment</span>
-<span id="cb10-3"><a></a><span class="kw">WHERE</span> SchoolName <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a></a><span class="op">=======</span></span>
+<span id="cb10-2"><a></a>```{.sql}</span>
+<span id="cb10-3"><a></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> fed0472177510ac2b73489add319bd3b9d3b379d</span>
+<span id="cb10-4"><a></a><span class="kw">SELECT</span> DistrictName</span>
+<span id="cb10-5"><a></a><span class="kw">FROM</span> main.enrollment</span>
+<span id="cb10-6"><a></a><span class="kw">WHERE</span> SchoolName <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="if-you-remember-nothing-else-from-this-section-1" class="slide level2">
-<h2>If you remember nothing else from this section</h2>
+<section>
+<section id="head" class="title-slide slide level1 center">
+<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>fed0472177510ac2b73489add319bd3b9d3b379d ## If you remember nothing else from this section</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -763,12 +837,62 @@
 <span id="cb11-3"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment <span class="kw">AS</span> e</span>
 <span id="cb11-4"><a></a>   <span class="kw">WHERE</span> e.SchoolName <span class="kw">LIKE</span> <span class="st">'%Jefferson%'</span></span>
 <span id="cb11-5"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> DistrictName <span class="kw">DESC</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="exercise-3-where-things-get-interesting" class="slide level2">
-<h2>Exercise 3 : WHERE things get interesting!</h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Exercise 3 : WHERE things get interesting! (Part 1)</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_770d553a" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_3dce1ab3" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Find all the schools in the Seattle School District.</li>
+</ol>
+<div class="footer">
+<p>This is WHERE somebody left a <a href="https://www.w3schools.com/SQL/sql_where.asp">handy reference link to WHERE clauses</a> again.</p>
+</div>
+</section>
+<section id="exercise-3-where-things-get-interesting-part-2" class="slide level2">
+<h2>Exercise 3 : WHERE things get interesting! (Part 2)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_66f911ba" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><p>Find all the schools in the Seattle School District.</p></li>
+<li><p>Find all schools in the Seattle School District that have “Elementary” in their name.</p></li>
+</ol>
+<div class="footer">
+<p>WHERE could a person find a <a href="https://www.w3schools.com/SQL/sql_like.asp">helpful reference for questions LIKE we have above</a>?</p>
+</div>
+</section>
+<section id="exercise-3-where-things-get-interesting-part-3" class="slide level2">
+<h2>Exercise 3 : WHERE things get interesting! (Part 3)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_5b4e3b93" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><p>Find all the schools in the Seattle School District.</p></li>
+<li><p>Find all schools in the Seattle School District that have “Elementary” in their name.</p></li>
+<li><p>From that list of schools, make the largest student count be on top. (Extra credit! LIMIT the results to 5)</p></li>
+</ol>
+<div class="footer">
+<p>All these references are completely out of <a href="https://www.w3schools.com/SQL/sql_orderby.asp">ORDER</a>?</p>
+</div>
+<p>======= ## Exercise 3 : WHERE things get interesting!</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_c5c4c762" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">20</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -777,7 +901,7 @@
 <ol type="1">
 <li><p>Find all the schools in the Seattle School District.</p></li>
 <li><p>Find all schools in the Seattle School District that have the name “John” in their name.</p></li>
-<li><p>From that list of schools, make the largest student count be on top. (There should only be four rows.)</p></li>
+<li><p>From that list of schools, make the largest student count be on top. (There should only be four rows.) &gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d</p></li>
 </ol>
 </section>
 <section id="exercise-3-answers" class="slide level2">
@@ -795,62 +919,97 @@
 <span id="cb12-11"><a></a>       ,SchoolName </span>
 <span id="cb12-12"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment</span>
 <span id="cb12-13"><a></a> <span class="kw">WHERE</span> DistrictName <span class="op">=</span> <span class="st">'Seattle School District No. 1'</span></span>
-<span id="cb12-14"><a></a>   <span class="kw">AND</span> SchoolName <span class="kw">LIKE</span> <span class="st">'%John%'</span>;</span>
-<span id="cb12-15"><a></a></span>
-<span id="cb12-16"><a></a><span class="co">-- Question 3</span></span>
-<span id="cb12-17"><a></a><span class="kw">SELECT</span> <span class="kw">DiSTINCT</span> </span>
-<span id="cb12-18"><a></a>       DistrictName,  </span>
-<span id="cb12-19"><a></a>       SchoolName, </span>
-<span id="cb12-20"><a></a>       student_count</span>
-<span id="cb12-21"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment</span>
-<span id="cb12-22"><a></a> <span class="kw">WHERE</span> DistrictName <span class="op">=</span> <span class="st">'Seattle School District No. 1'</span></span>
-<span id="cb12-23"><a></a>   <span class="kw">AND</span> SchoolName <span class="kw">LIKE</span> <span class="st">'%John%'</span></span>
-<span id="cb12-24"><a></a>   <span class="kw">AND</span> student_group <span class="op">=</span> <span class="st">'All Students'</span></span>
-<span id="cb12-25"><a></a>   <span class="kw">AND</span> GradeLevel  <span class="op">=</span> <span class="st">'All Grades'</span></span>
-<span id="cb12-26"><a></a> <span class="kw">ORDER</span> <span class="kw">BY</span> student_count <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="inline-functions" class="slide level2 smaller">
-<h2>Inline Functions</h2>
-<ul>
-<li>In line functions can be used in the SELECT statement</li>
-<li>Aggregation functions allow you to do one action to many rows at the same time.</li>
-<li>These are some of the common ones
-<ul>
-<li>SUM (adds together numbers of a numeric column over a set of grouped rows)</li>
-<li>COUNT (counts the number of non-blank cells in a column over a set of grouped rows)</li>
-<li>MIN (finds the smallest number of a numeric column over a set of grouped rows)</li>
-<li>MAX (finds the largest number of a numeric column over a set of grouped rows)</li>
-<li>AVG (finds the average of a numeric column over a set of grouped rows)</li>
-<li>LEFT/RIGHT (extracts the left or right characters from text)</li>
-</ul></li>
-<li>Using one of these functions will require you to use an alias to rename the column.</li>
-</ul>
-</section>
-<section id="count" class="slide level2">
-<h2>COUNT</h2>
-<ul>
-<li>You can Count a specific column. This will count all non-NULL values in that column.</li>
-<li>You can Count <em>everything</em> with COUNT(*)</li>
-</ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb13-1"><a></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> record_count <span class="co">--This will get all of the records in the table</span></span>
-<span id="cb13-2"><a></a><span class="kw">FROM</span> main.enrollment</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-14"><a></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
+<span id="cb12-15"><a></a>   <span class="kw">AND</span> SchoolName <span class="kw">LIKE</span> <span class="st">'%Elementary%'</span>;</span>
+<span id="cb12-16"><a></a><span class="op">=======</span></span>
+<span id="cb12-17"><a></a>   <span class="kw">AND</span> SchoolName <span class="kw">LIKE</span> <span class="st">'%John%'</span>;</span>
+<span id="cb12-18"><a></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> fed0472177510ac2b73489add319bd3b9d3b379d</span>
+<span id="cb12-19"><a></a></span>
+<span id="cb12-20"><a></a><span class="co">-- Question 3</span></span>
+<span id="cb12-21"><a></a><span class="kw">SELECT</span> <span class="kw">DiSTINCT</span> </span>
+<span id="cb12-22"><a></a>       DistrictName,  </span>
+<span id="cb12-23"><a></a>       SchoolName, </span>
+<span id="cb12-24"><a></a>       student_count</span>
+<span id="cb12-25"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment</span>
+<span id="cb12-26"><a></a> <span class="kw">WHERE</span> DistrictName <span class="op">=</span> <span class="st">'Seattle School District No. 1'</span></span>
+<span id="cb12-27"><a></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
+<span id="cb12-28"><a></a>   <span class="kw">AND</span> SchoolName <span class="kw">LIKE</span> <span class="st">'%Elementary%'</span></span>
+<span id="cb12-29"><a></a>   <span class="kw">AND</span> student_group <span class="op">=</span> <span class="st">'All Students'</span></span>
+<span id="cb12-30"><a></a>   <span class="kw">AND</span> GradeLevel  <span class="op">=</span> <span class="st">'All Grades'</span></span>
+<span id="cb12-31"><a></a> <span class="kw">ORDER</span> <span class="kw">BY</span> student_count <span class="kw">DESC</span>;</span>
+<span id="cb12-32"><a></a> </span>
+<span id="cb12-33"><a></a><span class="co">-- Extra Credit! Use this as the final line on Question 3</span></span>
+<span id="cb12-34"><a></a><span class="kw">LIMIT</span> <span class="dv">5</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>======= AND SchoolName LIKE ‘%John%’ AND student_group = ‘All Students’ AND GradeLevel = ‘All Grades’ ORDER BY student_count DESC;</p>
+<pre><code>
+
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d
+## Inline Functions {.smaller}
+
+-   In line functions can be used in the SELECT statement
+-   Aggregation functions allow you to do one action to many rows at the same time.
+-   These are some of the common ones
+    -   SUM (adds together numbers of a numeric column over a set of grouped rows)
+    -   COUNT (counts the number of non-blank cells in a column over a set of grouped rows)
+    -   MIN (finds the smallest number of a numeric column over a set of grouped rows)
+    -   MAX (finds the largest number of a numeric column over a set of grouped rows)
+    -   AVG (finds the average of a numeric column over a set of grouped rows)
+    -   LEFT/RIGHT (extracts the left or right characters from text)
+-   Using one of these functions will require you to use an alias to rename the column.
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+## COUNT
+
+-   You can Count a specific column. This will count all non-NULL values in that column.
+-   You can Count *everything* with COUNT(\*)
+
+``` sql
+=======
+## COUNT 
+-   You can Count a specific column. This will count all non-NULL values in that column.
+-   You can Count *everything* with COUNT(*)
+
+```{.sql}
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d
+SELECT COUNT(*) as record_count --This will get all of the records in the table
+FROM main.enrollment</code></pre>
 </section>
 <section id="group-by" class="slide level2">
 <h2>GROUP BY</h2>
 <ul>
-<li>Allows for aggregation</li>
+<li>Allows for aggregation &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
 <li>You will need each column that is not aggregated to be in the group by statement.</li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb14-1"><a></a>  <span class="kw">SELECT</span> SchoolYear,</span>
-<span id="cb14-2"><a></a>         DistrictName,</span>
-<span id="cb14-3"><a></a>         SchoolName</span>
-<span id="cb14-4"><a></a>    <span class="kw">FROM</span> main.enrollment</span>
-<span id="cb14-5"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> SchoolYear,</span>
-<span id="cb14-6"><a></a>         DistrictName,</span>
-<span id="cb14-7"><a></a>         SchoolName  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="aggregate-functions-examples" class="slide level2">
-<h2>Aggregate Functions Examples</h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb14-1"><a></a><span class="op">=======</span></span>
+<span id="cb14-2"><a></a><span class="op">-</span>   You will need <span class="kw">each</span> <span class="kw">column</span> that <span class="kw">is</span> <span class="kw">not</span> aggregated <span class="kw">to</span> be <span class="kw">in</span> <span class="kw">the</span> <span class="kw">group</span> <span class="kw">by</span> statement. </span>
+<span id="cb14-3"><a></a></span>
+<span id="cb14-4"><a></a>```{.sql}</span>
+<span id="cb14-5"><a></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> fed0472177510ac2b73489add319bd3b9d3b379d</span>
+<span id="cb14-6"><a></a>  <span class="kw">SELECT</span> SchoolYear,</span>
+<span id="cb14-7"><a></a>         DistrictName,</span>
+<span id="cb14-8"><a></a>         SchoolName</span>
+<span id="cb14-9"><a></a>    <span class="kw">FROM</span> main.enrollment</span>
+<span id="cb14-10"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> SchoolYear,</span>
+<span id="cb14-11"><a></a>         DistrictName,</span>
+<span id="cb14-12"><a></a>         SchoolName  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section>
+<section id="head-1" class="title-slide slide level1 center">
+<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>fed0472177510ac2b73489add319bd3b9d3b379d ## Aggregate Functions Examples</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <div class="sourceCode" id="cb15" data-code-line-numbers="|3|8"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb15-1"><a></a>  <span class="kw">SELECT</span> <span class="kw">DISTINCT</span> </span>
 <span id="cb15-2"><a></a>         DistrictName</span>
 <span id="cb15-3"><a></a>         ,<span class="fu">SUM</span>(student_count) <span class="kw">AS</span> student_count</span>
@@ -861,8 +1020,25 @@
 <span id="cb15-8"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> DistrictName</span>
 <span id="cb15-9"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> record_count <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="if-you-remember-nothing-else-from-this-section-2" class="slide level2">
-<h2>If you remember nothing else from this section</h2>
+
+<section>
+<section id="head-2" class="title-slide slide level1 center">
+<h1>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</h1>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>fed0472177510ac2b73489add319bd3b9d3b379d ## If you remember nothing else from this section</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -876,22 +1052,58 @@
 </div>
 </div>
 </div>
-</section>
-<section id="exercise-4" class="slide level2 smaller">
-<h2>Exercise 4</h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Exercise 4 (Part 1) {.smaller}</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f7fb465e" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_78ea4b3b" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Find the count of all districts with enrollments between 900 and 1100.</li>
+</ol>
+<div class="footer">
+<p><a href="https://www.w3schools.com/SQL/sql_between.asp">BETWEEN</a> this exercise and the next one, it’s hard to know what reference to <a href="https://www.w3schools.com/SQL/sql_count.asp">COUNT</a> on.</p>
+</div>
+</section>
+<section id="exercise-4-part-2" class="slide level2 smaller">
+<h2>Exercise 4 (Part 2)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_05d9ef1d" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Find the count of all districts with enrollments between 900 and 1100.</li>
+<li>Give the districts with counts of schools that have populations greater than 1000. &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+</ol>
+<div class="footer">
+<p>We can <a href="https://www.w3schools.com/SQL/sql_count.asp">COUNT</a> on this reference being <a href="https://www.w3schools.com/SQl/sql_where.asp">GREATER THAN</a> the last one.</p>
+</div>
+</section>
+<section id="exercise-4-part-3" class="slide level2 smaller">
+<h2>Exercise 4 (Part 3)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_e4e7f9d2" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 <ol type="1">
 <li>Find the count of all districts with enrollments between 900 and 1100.</li>
 <li>Give the districts with counts of schools that have populations greater than 1000.</li>
-<li>Give the count of students by county as reported at the district level.</li>
+<li>Give the number of students by county as reported at the district level.</li>
 </ol>
+<div class="footer">
+<p>This is a tricky question, but there has to be <a href="https://www.w3schools.com/SQl/sql_sum.asp">SUM</a> operator we can use</p>
+</div>
 </section>
 <section id="exercise-4-answers" class="slide level2">
 <h2>Exercise 4 : Answers</h2>
@@ -925,9 +1137,10 @@
 </section>
 <section id="break" class="slide level2">
 <h2>BREAK</h2>
-<div class="cell">
+
+<img data-src="assets/images/kitkat.png" alt="A Kit Kat bar" width="500" class="r-stretch quarto-figure-center"><p class="caption">Image references may expire, unlike Kit Kat bars.</p><div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_75699729" data-update-every="1" tabindex="0" style="top:50;right:1;">
+<div class="countdown" id="timer_434f9e9d" data-update-every="1" tabindex="0" style="top:50;right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -941,7 +1154,7 @@
 <li>For the purposes of this workshop, we will focus on LEFT JOINs and INNER JOINs. There are also RIGHT JOINs and FULL OUTER JOINs.</li>
 </ul>
 <p>LEFT JOIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INNER JOIN</p>
-<p><img data-src="left_outer_join.png" style="width:45.0%" alt="LEFT JOIN"> <img data-src="inner_join.png" style="width:45.0%" alt="INNER JOIN"> <!-- The titles can places with absolute positioning --></p>
+<p><img data-src="assets/images/left_outer_join.png" style="width:45.0%" alt="LEFT JOIN"> <img data-src="assets/images/inner_join.png" style="width:45.0%" alt="INNER JOIN"> <!-- The titles can places with absolute positioning --></p>
 </section>
 <section id="join-sytax" class="slide level2">
 <h2>Join Sytax</h2>
@@ -958,76 +1171,124 @@
 <section id="left-vs-inner" class="slide level2 smaller incremental">
 <h2>LEFT vs INNER</h2>
 <ul>
-<li><strong><em>THESE SHOULD BE INCREMENTAL, BUT IT’S NOT WORKING!</em></strong></li>
 <li>Use a LEFT JOIN when you want one of your tables to be a “base”.</li>
 <li>That way, you can get all the information you know you want in your base table and then just add details.</li>
 <li>Use an INNER JOIN when you want only those rows that are common to both.</li>
 <li>For instance, if you did an INNER JOIN on enrollment and graduation, you would only have the data for schools with enrollment <strong>AND</strong> graduation data.</li>
 </ul>
 </section>
-<section id="exercise-5" class="slide level2">
-<h2>Exercise 5</h2>
+<section id="exercise-5-part-1" class="slide level2">
+<h2>Exercise 5 (Part 1)</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_6dbc44b9" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_1928598f" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 <ol type="1">
-<li>Using your answer to 4.2 as a reference (or ours if you didn’t finish), join in to the public directory, find the administrator.</li>
-<li>Find the bottom five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.</li>
-<li>Find schools that have enrollment but no graduation data. NEED TO MAKE THIS QUESTION DIFFERENT.</li>
+<li>Using your answer to 4.2 as a reference (you can use ours if you didn’t finish), join in to the public directory, find the administrator.</li>
+</ol>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb18-1"><a></a><span class="co">-- Example Syntax from 4.2</span></span>
+<span id="cb18-2"><a></a></span>
+<span id="cb18-3"><a></a>  <span class="kw">SELECT</span> DistrictName, <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> BigSchoolCount</span>
+<span id="cb18-4"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment</span>
+<span id="cb18-5"><a></a>   <span class="kw">WHERE</span> student_count <span class="op">&gt;</span> <span class="dv">1000</span> </span>
+<span id="cb18-6"><a></a>     <span class="kw">AND</span> OrganizationLevel <span class="op">=</span> <span class="st">'School'</span> </span>
+<span id="cb18-7"><a></a>     <span class="kw">AND</span> student_group <span class="op">=</span> <span class="st">'All Students'</span> </span>
+<span id="cb18-8"><a></a>     <span class="kw">AND</span> GradeLevel <span class="op">=</span> <span class="st">'All Grades'</span></span>
+<span id="cb18-9"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> DistrictName </span>
+<span id="cb18-10"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> BigSchoolCount <span class="kw">DESC</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="footer">
+<p>Fun fact! People who learn SQL are never lonely at lunch because they know how to <a href="https://www.w3schools.com/SQl/sql_join_left.asp">JOIN</a> tables.</p>
+</div>
+</section>
+<section id="exercise-5-part-2" class="slide level2">
+<h2>Exercise 5 (Part 2)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_f982af3b" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Using your answer to 4.2 as a reference (you can use ours if you didn’t finish), join in to the public directory, find the administrator.</li>
+<li>Using your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.</li>
+</ol>
+<div class="footer">
+<p>Fun fact! People who learn SQL are never lonely at lunch because they know how to <a href="https://www.w3schools.com/SQl/sql_join_left.asp">JOIN</a> tables.</p>
+</div>
+</section>
+<section id="exercise-5-part-3" class="slide level2">
+<h2>Exercise 5 (Part 3)</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_a3c99027" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Using your answer to 4.2 as a reference (you can use ours if you didn’t finish), join in to the public directory, find the administrator.</li>
+<li>Using your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.</li>
+<li>Find schools that have enrollment but no graduation data. (Fun fact! You can’t use = to find NULL values. There must be some other way to find out what IS NULL. Hmmm…)</li>
 </ol>
 </section>
 <section id="exercise-5-answers" class="slide level2">
 <h2>Exercise 5: Answers</h2>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb18-1"><a></a><span class="co">-- Question 1</span></span>
-<span id="cb18-2"><a></a>  <span class="kw">SELECT</span> E.DistrictName,</span>
-<span id="cb18-3"><a></a>         <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> BigSchoolCount,</span>
-<span id="cb18-4"><a></a>         PD.Administrator,</span>
-<span id="cb18-5"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment E</span>
-<span id="cb18-6"><a></a>         <span class="kw">LEFT</span> <span class="kw">JOIN</span> <span class="ot">"wera-db"</span>.main.public_directory PD</span>
-<span id="cb18-7"><a></a>                <span class="kw">ON</span> E.DistrictOrganizationId <span class="op">=</span> PD.DistrictOrganizationId</span>
-<span id="cb18-8"><a></a>                   <span class="kw">AND</span> PD.OrganizationLevel <span class="op">=</span> <span class="st">'District'</span></span>
-<span id="cb18-9"><a></a>   <span class="kw">WHERE</span> student_count <span class="op">&gt;</span> <span class="dv">1000</span> <span class="kw">AND</span></span>
-<span id="cb18-10"><a></a>         E.OrganizationLevel <span class="op">=</span> <span class="st">'School'</span> <span class="kw">AND</span></span>
-<span id="cb18-11"><a></a>         student_group <span class="op">=</span> <span class="st">'All Students'</span> <span class="kw">AND</span></span>
-<span id="cb18-12"><a></a>         GradeLevel <span class="op">=</span> <span class="st">'All Grades'</span></span>
-<span id="cb18-13"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> E.DistrictName, PD.Administrator</span>
-<span id="cb18-14"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> BigSchoolCount <span class="kw">DESC</span>;</span>
-<span id="cb18-15"><a></a>   </span>
-<span id="cb18-16"><a></a><span class="co">-- Question 2   </span></span>
-<span id="cb18-17"><a></a>  <span class="kw">SELECT</span> <span class="kw">DISTINCT</span></span>
-<span id="cb18-18"><a></a>         e.SchoolYear</span>
-<span id="cb18-19"><a></a>         ,e.SchoolName</span>
-<span id="cb18-20"><a></a>         ,g.GraduationRate </span>
-<span id="cb18-21"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment e</span>
-<span id="cb18-22"><a></a>         <span class="kw">LEFT</span> <span class="kw">JOIN</span> <span class="ot">"wera-db"</span>.main.graduation g </span>
-<span id="cb18-23"><a></a>                <span class="kw">ON</span> g.SchoolOrganizationId <span class="op">=</span> e.SchoolOrganizationID </span>
-<span id="cb18-24"><a></a>   <span class="kw">WHERE</span> e.student_group <span class="op">=</span> <span class="st">'All Students'</span></span>
-<span id="cb18-25"><a></a>     <span class="kw">AND</span> e.GradeLevel  <span class="op">=</span> <span class="st">'All Grades'</span></span>
-<span id="cb18-26"><a></a>     <span class="kw">AND</span> e.SchoolName <span class="op">!=</span> <span class="st">'District Total'</span></span>
-<span id="cb18-27"><a></a>     <span class="kw">AND</span> g.GraduationRate <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span></span>
-<span id="cb18-28"><a></a>     <span class="kw">AND</span> g.Cohort  <span class="op">=</span> <span class="st">'Four Year'</span></span>
-<span id="cb18-29"><a></a>     <span class="kw">AND</span> g.StudentGroupType  <span class="kw">LIKE</span> <span class="st">'%All%'</span></span>
-<span id="cb18-30"><a></a>     <span class="kw">AND</span> e.student_count <span class="op">&gt;</span> <span class="dv">1000</span></span>
-<span id="cb18-31"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> g.GraduationRate    </span>
-<span id="cb18-32"><a></a>   </span>
-<span id="cb18-33"><a></a><span class="co">-- Question 3   </span></span>
-<span id="cb18-34"><a></a></span>
-<span id="cb18-35"><a></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span></span>
-<span id="cb18-36"><a></a>         e.SchoolYear</span>
-<span id="cb18-37"><a></a>         ,e.SchoolName</span>
-<span id="cb18-38"><a></a>         ,g.GraduationRate </span>
-<span id="cb18-39"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment e</span>
-<span id="cb18-40"><a></a>         <span class="kw">LEFT</span> <span class="kw">JOIN</span> <span class="ot">"wera-db"</span>.main.graduation g </span>
-<span id="cb18-41"><a></a>                <span class="kw">ON</span> g.SchoolOrganizationId <span class="op">=</span> e.SchoolOrganizationID</span>
-<span id="cb18-42"><a></a>   <span class="kw">WHERE</span> e.student_group <span class="op">=</span> <span class="st">'All Students'</span></span>
-<span id="cb18-43"><a></a>     <span class="kw">AND</span> e.GradeLevel  <span class="op">=</span> <span class="st">'All Grades'</span></span>
-<span id="cb18-44"><a></a>     <span class="kw">AND</span> e.SchoolName <span class="op">!=</span> <span class="st">'District Total'</span>    </span>
-<span id="cb18-45"><a></a>     <span class="kw">AND</span> g.GraduationRate <span class="kw">IS</span> <span class="kw">NULL</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb19-1"><a></a><span class="co">-- Question 1</span></span>
+<span id="cb19-2"><a></a>  <span class="kw">SELECT</span> E.DistrictName,</span>
+<span id="cb19-3"><a></a>         <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> BigSchoolCount,</span>
+<span id="cb19-4"><a></a>         PD.Administrator,</span>
+<span id="cb19-5"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment E</span>
+<span id="cb19-6"><a></a>         <span class="kw">LEFT</span> <span class="kw">JOIN</span> <span class="ot">"wera-db"</span>.main.public_directory PD</span>
+<span id="cb19-7"><a></a>                <span class="kw">ON</span> E.DistrictOrganizationId <span class="op">=</span> PD.DistrictOrganizationId</span>
+<span id="cb19-8"><a></a>                   <span class="kw">AND</span> PD.OrganizationLevel <span class="op">=</span> <span class="st">'District'</span></span>
+<span id="cb19-9"><a></a>   <span class="kw">WHERE</span> student_count <span class="op">&gt;</span> <span class="dv">1000</span> <span class="kw">AND</span></span>
+<span id="cb19-10"><a></a>         E.OrganizationLevel <span class="op">=</span> <span class="st">'School'</span> <span class="kw">AND</span></span>
+<span id="cb19-11"><a></a>         student_group <span class="op">=</span> <span class="st">'All Students'</span> <span class="kw">AND</span></span>
+<span id="cb19-12"><a></a>         GradeLevel <span class="op">=</span> <span class="st">'All Grades'</span></span>
+<span id="cb19-13"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> E.DistrictName, PD.Administrator</span>
+<span id="cb19-14"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> BigSchoolCount <span class="kw">DESC</span>;</span>
+<span id="cb19-15"><a></a>   </span>
+<span id="cb19-16"><a></a><span class="co">-- Question 2   </span></span>
+<span id="cb19-17"><a></a>  <span class="kw">SELECT</span> <span class="kw">DISTINCT</span></span>
+<span id="cb19-18"><a></a>         e.SchoolYear</span>
+<span id="cb19-19"><a></a>         ,e.SchoolName</span>
+<span id="cb19-20"><a></a>         ,g.GraduationRate </span>
+<span id="cb19-21"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment e</span>
+<span id="cb19-22"><a></a>         <span class="kw">LEFT</span> <span class="kw">JOIN</span> <span class="ot">"wera-db"</span>.main.graduation g </span>
+<span id="cb19-23"><a></a>                <span class="kw">ON</span> g.SchoolOrganizationId <span class="op">=</span> e.SchoolOrganizationID </span>
+<span id="cb19-24"><a></a>   <span class="kw">WHERE</span> e.student_group <span class="op">=</span> <span class="st">'All Students'</span></span>
+<span id="cb19-25"><a></a>     <span class="kw">AND</span> e.GradeLevel  <span class="op">=</span> <span class="st">'All Grades'</span></span>
+<span id="cb19-26"><a></a>     <span class="kw">AND</span> e.SchoolName <span class="op">!=</span> <span class="st">'District Total'</span></span>
+<span id="cb19-27"><a></a>     <span class="kw">AND</span> g.GraduationRate <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span></span>
+<span id="cb19-28"><a></a>     <span class="kw">AND</span> g.Cohort  <span class="op">=</span> <span class="st">'Four Year'</span></span>
+<span id="cb19-29"><a></a>     <span class="kw">AND</span> g.StudentGroupType  <span class="kw">LIKE</span> <span class="st">'%All%'</span></span>
+<span id="cb19-30"><a></a>     <span class="kw">AND</span> e.student_count <span class="op">&gt;</span> <span class="dv">1000</span></span>
+<span id="cb19-31"><a></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
+<span id="cb19-32"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> g.GraduationRate <span class="kw">DESC</span>    </span>
+<span id="cb19-33"><a></a><span class="op">=======</span></span>
+<span id="cb19-34"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> g.GraduationRate    </span>
+<span id="cb19-35"><a></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> fed0472177510ac2b73489add319bd3b9d3b379d</span>
+<span id="cb19-36"><a></a>   </span>
+<span id="cb19-37"><a></a><span class="co">-- Question 3   </span></span>
+<span id="cb19-38"><a></a></span>
+<span id="cb19-39"><a></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span></span>
+<span id="cb19-40"><a></a>         e.SchoolYear</span>
+<span id="cb19-41"><a></a>         ,e.SchoolName</span>
+<span id="cb19-42"><a></a>         ,g.GraduationRate </span>
+<span id="cb19-43"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment e</span>
+<span id="cb19-44"><a></a>         <span class="kw">LEFT</span> <span class="kw">JOIN</span> <span class="ot">"wera-db"</span>.main.graduation g </span>
+<span id="cb19-45"><a></a>                <span class="kw">ON</span> g.SchoolOrganizationId <span class="op">=</span> e.SchoolOrganizationID</span>
+<span id="cb19-46"><a></a>   <span class="kw">WHERE</span> e.student_group <span class="op">=</span> <span class="st">'All Students'</span></span>
+<span id="cb19-47"><a></a>     <span class="kw">AND</span> e.GradeLevel  <span class="op">=</span> <span class="st">'All Grades'</span></span>
+<span id="cb19-48"><a></a>     <span class="kw">AND</span> e.SchoolName <span class="op">!=</span> <span class="st">'District Total'</span>    </span>
+<span id="cb19-49"><a></a>     <span class="kw">AND</span> g.GraduationRate <span class="kw">IS</span> <span class="kw">NULL</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="common-table-expressions-ctes-with-keyword" class="slide level2 smaller">
 <h2>Common Table Expressions (CTEs) (WITH Keyword)</h2>
@@ -1036,23 +1297,23 @@
 <li>Goes before the SELECT statement.</li>
 <li>Example (you can’t call an aggregate function inside of an aggregate function)</li>
 </ul>
-<div class="sourceCode" id="cb19" data-code-line-numbers="|1-9|10-11"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb19-1"><a></a><span class="kw">WITH</span> step1 <span class="kw">AS</span> (</span>
-<span id="cb19-2"><a></a><span class="kw">SELECT</span> SchoolYear, </span>
-<span id="cb19-3"><a></a>       <span class="fu">SUM</span>(graduate)<span class="op">/</span><span class="fu">SUM</span>(finalcohort) <span class="kw">AS</span> grad_rate,</span>
-<span id="cb19-4"><a></a>       <span class="fu">SUM</span>(continuing)<span class="op">/</span><span class="fu">SUM</span>(finalcohort) <span class="kw">AS</span> continuing_rate</span>
-<span id="cb19-5"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.graduation</span>
-<span id="cb19-6"><a></a>  <span class="kw">WHERE</span> studentgrouptype <span class="op">=</span> <span class="st">'All'</span></span>
-<span id="cb19-7"><a></a>    <span class="kw">AND</span> cohort <span class="op">=</span> <span class="st">'Four Year'</span></span>
-<span id="cb19-8"><a></a>    <span class="kw">AND</span> organizationlevel <span class="op">=</span> <span class="st">'State'</span></span>
-<span id="cb19-9"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> SchoolYear)</span>
-<span id="cb19-10"><a></a><span class="kw">SELECT</span> <span class="fu">SUM</span>(grad_rate <span class="op">+</span> continuing_rate) <span class="kw">AS</span> combined_rate</span>
-<span id="cb19-11"><a></a>  <span class="kw">FROM</span> step1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20" data-code-line-numbers="|1-9|10-11"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb20-1"><a></a><span class="kw">WITH</span> step1 <span class="kw">AS</span> (</span>
+<span id="cb20-2"><a></a><span class="kw">SELECT</span> SchoolYear, </span>
+<span id="cb20-3"><a></a>       <span class="fu">SUM</span>(graduate)<span class="op">/</span><span class="fu">SUM</span>(finalcohort) <span class="kw">AS</span> grad_rate,</span>
+<span id="cb20-4"><a></a>       <span class="fu">SUM</span>(continuing)<span class="op">/</span><span class="fu">SUM</span>(finalcohort) <span class="kw">AS</span> continuing_rate</span>
+<span id="cb20-5"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.graduation</span>
+<span id="cb20-6"><a></a>  <span class="kw">WHERE</span> studentgrouptype <span class="op">=</span> <span class="st">'All'</span></span>
+<span id="cb20-7"><a></a>    <span class="kw">AND</span> cohort <span class="op">=</span> <span class="st">'Four Year'</span></span>
+<span id="cb20-8"><a></a>    <span class="kw">AND</span> organizationlevel <span class="op">=</span> <span class="st">'State'</span></span>
+<span id="cb20-9"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> SchoolYear)</span>
+<span id="cb20-10"><a></a><span class="kw">SELECT</span> <span class="fu">SUM</span>(grad_rate <span class="op">+</span> continuing_rate) <span class="kw">AS</span> combined_rate</span>
+<span id="cb20-11"><a></a>  <span class="kw">FROM</span> step1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="example-6" class="slide level2">
-<h2>Example 6</h2>
+<section id="exercise-6" class="slide level2">
+<h2>Exercise 6</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_61cc1012" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_466b6547" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1061,24 +1322,27 @@
 <ol type="1">
 <li>Take the first query from Exercise 5, remove the order by clause, put it into a CTE, and then select everything from it.</li>
 </ol>
+<div class="footer">
+<p>Some people really like the <a href="https://www.geeksforgeeks.org/cte-in-sql/">CTE</a>, but I prefer the mountains.</p>
+</div>
 </section>
 <section id="example-6-answers" class="slide level2">
 <h2>Example 6: Answers</h2>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb20-1"><a></a><span class="co">-- Question 1</span></span>
-<span id="cb20-2"><a></a><span class="kw">WITH</span> big_schools <span class="kw">AS</span> ( <span class="kw">SELECT</span> E.DistrictName,</span>
-<span id="cb20-3"><a></a>         <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> BigSchoolCount,</span>
-<span id="cb20-4"><a></a>         PD.Administrator,</span>
-<span id="cb20-5"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment E</span>
-<span id="cb20-6"><a></a>         <span class="kw">LEFT</span> <span class="kw">JOIN</span> <span class="ot">"wera-db"</span>.main.public_directory PD</span>
-<span id="cb20-7"><a></a>                <span class="kw">ON</span> E.DistrictOrganizationId <span class="op">=</span> PD.DistrictOrganizationId</span>
-<span id="cb20-8"><a></a>                   <span class="kw">AND</span> PD.OrganizationLevel <span class="op">=</span> <span class="st">'District'</span></span>
-<span id="cb20-9"><a></a>   <span class="kw">WHERE</span> student_count <span class="op">&gt;</span> <span class="dv">1000</span> <span class="kw">AND</span></span>
-<span id="cb20-10"><a></a>         E.OrganizationLevel <span class="op">=</span> <span class="st">'School'</span> <span class="kw">AND</span></span>
-<span id="cb20-11"><a></a>         student_group <span class="op">=</span> <span class="st">'All Students'</span> <span class="kw">AND</span></span>
-<span id="cb20-12"><a></a>         GradeLevel <span class="op">=</span> <span class="st">'All Grades'</span></span>
-<span id="cb20-13"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> E.DistrictName, PD.Administrator)</span>
-<span id="cb20-14"><a></a><span class="kw">SELECT</span> <span class="op">*</span></span>
-<span id="cb20-15"><a></a><span class="kw">FROM</span> big_schools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb21-1"><a></a><span class="co">-- Question 1</span></span>
+<span id="cb21-2"><a></a><span class="kw">WITH</span> big_schools <span class="kw">AS</span> ( <span class="kw">SELECT</span> E.DistrictName,</span>
+<span id="cb21-3"><a></a>         <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> BigSchoolCount,</span>
+<span id="cb21-4"><a></a>         PD.Administrator,</span>
+<span id="cb21-5"><a></a>    <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment E</span>
+<span id="cb21-6"><a></a>         <span class="kw">LEFT</span> <span class="kw">JOIN</span> <span class="ot">"wera-db"</span>.main.public_directory PD</span>
+<span id="cb21-7"><a></a>                <span class="kw">ON</span> E.DistrictOrganizationId <span class="op">=</span> PD.DistrictOrganizationId</span>
+<span id="cb21-8"><a></a>                   <span class="kw">AND</span> PD.OrganizationLevel <span class="op">=</span> <span class="st">'District'</span></span>
+<span id="cb21-9"><a></a>   <span class="kw">WHERE</span> student_count <span class="op">&gt;</span> <span class="dv">1000</span> <span class="kw">AND</span></span>
+<span id="cb21-10"><a></a>         E.OrganizationLevel <span class="op">=</span> <span class="st">'School'</span> <span class="kw">AND</span></span>
+<span id="cb21-11"><a></a>         student_group <span class="op">=</span> <span class="st">'All Students'</span> <span class="kw">AND</span></span>
+<span id="cb21-12"><a></a>         GradeLevel <span class="op">=</span> <span class="st">'All Grades'</span></span>
+<span id="cb21-13"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> E.DistrictName, PD.Administrator)</span>
+<span id="cb21-14"><a></a><span class="kw">SELECT</span> <span class="op">*</span></span>
+<span id="cb21-15"><a></a><span class="kw">FROM</span> big_schools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="resources-1" class="slide level2 smaller">
 <h2>Resources</h2>
@@ -1086,7 +1350,7 @@
 <ul>
 <li><p>W3 Schools online tutorials (https://www.w3schools.com/)</p></li>
 <li><p>Geeks For Geeks (https://www.geeksforgeeks.org)</p></li>
-<li><p>Example Google Search “W3Schools SQL how to execute based off a condition.” <img data-src="W3Schools_Example_Search.png" alt="Example"></p></li>
+<li><p>Example Google Search “W3Schools SQL how to execute based off a condition.” <img data-src="assets/images/W3Schools_Example_Search.png" alt="Example"></p></li>
 </ul>
 </section>
 <section id="ending" class="slide level2">
@@ -1102,29 +1366,29 @@
 <li><p>If you need to filter on a row-level criteria, use the WHERE clause.</p></li>
 <li><p>Example</p></li>
 </ul>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb21-1"><a></a></span>
-<span id="cb21-2"><a></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> DistrictCount</span>
-<span id="cb21-3"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment</span>
-<span id="cb21-4"><a></a> <span class="kw">WHERE</span> student_count <span class="kw">BETWEEN</span> <span class="dv">900</span> <span class="kw">AND</span> <span class="dv">1100</span></span>
-<span id="cb21-5"><a></a>   <span class="kw">AND</span> OrganizationLevel <span class="op">=</span> <span class="st">'District'</span></span>
-<span id="cb21-6"><a></a>   <span class="kw">AND</span> student_group <span class="op">=</span> <span class="st">'All Students'</span></span>
-<span id="cb21-7"><a></a>   <span class="kw">AND</span> GradeLevel <span class="op">=</span> <span class="st">'All Grades'</span></span>
-<span id="cb21-8"><a></a><span class="kw">HAVING</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="op">&gt;</span> <span class="dv">1</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb22-1"><a></a></span>
+<span id="cb22-2"><a></a><span class="kw">SELECT</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">as</span> DistrictCount</span>
+<span id="cb22-3"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment</span>
+<span id="cb22-4"><a></a> <span class="kw">WHERE</span> student_count <span class="kw">BETWEEN</span> <span class="dv">900</span> <span class="kw">AND</span> <span class="dv">1100</span></span>
+<span id="cb22-5"><a></a>   <span class="kw">AND</span> OrganizationLevel <span class="op">=</span> <span class="st">'District'</span></span>
+<span id="cb22-6"><a></a>   <span class="kw">AND</span> student_group <span class="op">=</span> <span class="st">'All Students'</span></span>
+<span id="cb22-7"><a></a>   <span class="kw">AND</span> GradeLevel <span class="op">=</span> <span class="st">'All Grades'</span></span>
+<span id="cb22-8"><a></a><span class="kw">HAVING</span> <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="op">&gt;</span> <span class="dv">1</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h4 id="which-order-do-these-go-in">Which Order do these go in?</h4>
 <p>The list below contains <em>all</em> the possible keywords. We will get to all of them in this workshop.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb22-1"><a></a></span>
-<span id="cb22-2"><a></a>  <span class="kw">WITH</span> cte_name <span class="kw">AS</span> ()</span>
-<span id="cb22-3"><a></a>  <span class="kw">SELECT</span> <span class="kw">DISTINCT</span></span>
-<span id="cb22-4"><a></a>         <span class="kw">column</span></span>
-<span id="cb22-5"><a></a>         ,AGG_FUNC(column_or_expression), …</span>
-<span id="cb22-6"><a></a>    <span class="kw">FROM</span> mytable</span>
-<span id="cb22-7"><a></a>         <span class="kw">JOIN</span> another_table</span>
-<span id="cb22-8"><a></a>           <span class="kw">ON</span> mytable.<span class="kw">column</span> <span class="op">=</span> another_table.<span class="kw">column</span></span>
-<span id="cb22-9"><a></a>   <span class="kw">WHERE</span> constraint_expression</span>
-<span id="cb22-10"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="kw">column</span></span>
-<span id="cb22-11"><a></a>  <span class="kw">HAVING</span> constraint_expression</span>
-<span id="cb22-12"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="kw">column</span> <span class="kw">ASC</span><span class="op">/</span><span class="kw">DESC</span></span>
-<span id="cb22-13"><a></a>   <span class="kw">LIMIT</span> <span class="fu">count</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb23-1"><a></a></span>
+<span id="cb23-2"><a></a>  <span class="kw">WITH</span> cte_name <span class="kw">AS</span> ()</span>
+<span id="cb23-3"><a></a>  <span class="kw">SELECT</span> <span class="kw">DISTINCT</span></span>
+<span id="cb23-4"><a></a>         <span class="kw">column</span></span>
+<span id="cb23-5"><a></a>         ,AGG_FUNC(column_or_expression), …</span>
+<span id="cb23-6"><a></a>    <span class="kw">FROM</span> mytable</span>
+<span id="cb23-7"><a></a>         <span class="kw">JOIN</span> another_table</span>
+<span id="cb23-8"><a></a>           <span class="kw">ON</span> mytable.<span class="kw">column</span> <span class="op">=</span> another_table.<span class="kw">column</span></span>
+<span id="cb23-9"><a></a>   <span class="kw">WHERE</span> constraint_expression</span>
+<span id="cb23-10"><a></a><span class="kw">GROUP</span> <span class="kw">BY</span> <span class="kw">column</span></span>
+<span id="cb23-11"><a></a>  <span class="kw">HAVING</span> constraint_expression</span>
+<span id="cb23-12"><a></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="kw">column</span> <span class="kw">ASC</span><span class="op">/</span><span class="kw">DESC</span></span>
+<span id="cb23-13"><a></a>   <span class="kw">LIMIT</span> <span class="fu">count</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h4 class="scrollable smaller" id="limit-the-number-of-results">Limit the number of results</h4>
 <div class="scrollable smaller">
 <ul>
@@ -1133,23 +1397,23 @@
 <li><p>Microsoft SQL Products will have you put the TOP keyword after the SELECT Statement.</p></li>
 <li><p>Examples:</p></li>
 </ul>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb23-1"><a></a></span>
-<span id="cb23-2"><a></a><span class="co">-- Most ways</span></span>
-<span id="cb23-3"><a></a></span>
-<span id="cb23-4"><a></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> <span class="op">*</span></span>
-<span id="cb23-5"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment <span class="kw">AS</span> e</span>
-<span id="cb23-6"><a></a> <span class="kw">WHERE</span> e.SchoolName <span class="kw">LIKE</span> <span class="st">'%Jefferson%'</span></span>
-<span id="cb23-7"><a></a> <span class="kw">LIMIT</span> <span class="dv">10</span></span>
-<span id="cb23-8"><a></a></span>
-<span id="cb23-9"><a></a><span class="co">-- Microsoft way</span></span>
-<span id="cb23-10"><a></a></span>
-<span id="cb23-11"><a></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> TOP <span class="dv">10</span> <span class="op">*</span></span>
-<span id="cb23-12"><a></a>  <span class="kw">FROM</span> [wera<span class="op">-</span>db].main.enrollment <span class="kw">AS</span> e</span>
-<span id="cb23-13"><a></a> <span class="kw">WHERE</span> e.SchoolName <span class="kw">LIKE</span> <span class="st">'%Jefferson%'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource sql number-lines code-with-copy"><code class="sourceCode sql"><span id="cb24-1"><a></a></span>
+<span id="cb24-2"><a></a><span class="co">-- Most ways</span></span>
+<span id="cb24-3"><a></a></span>
+<span id="cb24-4"><a></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> <span class="op">*</span></span>
+<span id="cb24-5"><a></a>  <span class="kw">FROM</span> <span class="ot">"wera-db"</span>.main.enrollment <span class="kw">AS</span> e</span>
+<span id="cb24-6"><a></a> <span class="kw">WHERE</span> e.SchoolName <span class="kw">LIKE</span> <span class="st">'%Jefferson%'</span></span>
+<span id="cb24-7"><a></a> <span class="kw">LIMIT</span> <span class="dv">10</span></span>
+<span id="cb24-8"><a></a></span>
+<span id="cb24-9"><a></a><span class="co">-- Microsoft way</span></span>
+<span id="cb24-10"><a></a></span>
+<span id="cb24-11"><a></a><span class="kw">SELECT</span> <span class="kw">DISTINCT</span> TOP <span class="dv">10</span> <span class="op">*</span></span>
+<span id="cb24-12"><a></a>  <span class="kw">FROM</span> [wera<span class="op">-</span>db].main.enrollment <span class="kw">AS</span> e</span>
+<span id="cb24-13"><a></a> <span class="kw">WHERE</span> e.SchoolName <span class="kw">LIKE</span> <span class="st">'%Jefferson%'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
-</section>
+</section></section>
 
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

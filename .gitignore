@@ -2,5 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+*.duckdb*
+*.wal
+*.tmp/
 
 /.quarto/
