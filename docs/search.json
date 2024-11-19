@@ -1,5 +1,341 @@
 [
   {
+    "objectID": "WERA-2024-Intro-SQL.html#as-you-come-in",
+    "href": "WERA-2024-Intro-SQL.html#as-you-come-in",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "As you come in",
+    "text": "As you come in\n\nMake sure you have access to the presentation. https://github.com/jeff-p-stuinfo/wera_sql_24\nConnect to the database (click here for instructions)"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#introductions",
+    "href": "WERA-2024-Intro-SQL.html#introductions",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Introductions",
+    "text": "Introductions\nWe are Cameron Marsden and Jeff Pannell. We are senior data analysts at OSPI. We work on the Report Card. Combined we have 13 years of SQL experience.\nIntroduce yourself!\n\nWhat is your name?\nWhat do you do?\nWhat is your experience with SQL?\nHow do you work with data?\n\nWhat kind of data do you work with?"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#agenda-and-structure",
+    "href": "WERA-2024-Intro-SQL.html#agenda-and-structure",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Agenda and Structure",
+    "text": "Agenda and Structure\n\n\nOverview of what SQL is. (Lecture)\n\nSQL Flavors\nObjects\nQueries\n\nHands on exercises on how to do SQL coding.\n\nBasic Queries\nUse Cases\n\nThere will be breaks!\nParking Lot\n\nIf you have questions, write it on a sticky note, and then put it on the big paper on the side of the room"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#target-audience",
+    "href": "WERA-2024-Intro-SQL.html#target-audience",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Target Audience",
+    "text": "Target Audience\n\nNew coders to late beginners.\n\nIf you find that you’re finishing the exercises early, try helping your neighbor (if asked). Trying to explain why what you did worked can help you learn."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#resources",
+    "href": "WERA-2024-Intro-SQL.html#resources",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Resources",
+    "text": "Resources\nIf you want to learn more:\n\nW3 Schools online tutorials (https://www.w3schools.com/)\nGeeks For Geeks (https://www.geeksforgeeks.org)\nExample Google Search “W3Schools SQL how to execute based off a condition.”"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#what-is-sql",
+    "href": "WERA-2024-Intro-SQL.html#what-is-sql",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "What is SQL?",
+    "text": "What is SQL?\n\nSQL is a Structured Query Language.\nYou don’t need to know where the data is stored on the hard drive, you just need to know which table it’s in and how to describe it.\nIt comes in many flavors\n\nDuckDB\nPostgreSQL\nMicrosft SQL Server (Transact-SQL a.k.a. T-SQL)\nSQLite\nMySQL\nOracle SQL"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#sql-definition-continued",
+    "href": "WERA-2024-Intro-SQL.html#sql-definition-continued",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "SQL Definition (continued)",
+    "text": "SQL Definition (continued)\n\nAll of these flavors are based off the most recent version of an international standard. This makes it so that the vast majority of what you can do in one language, you can do in every language.\nWe will be focusing on the commonalities between the languages in this workshop."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#sql-use-cases",
+    "href": "WERA-2024-Intro-SQL.html#sql-use-cases",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "SQL Use Cases",
+    "text": "SQL Use Cases\n\nAs a centralized data storage solution\nAs a data source for reports.\nCompute calculations on data and store for easy and convenient access.\nFind statistics on your data without external tools.\nConduct data exploration to better understand your data.\nOther Advanced uses (Partitions, Conditional Statements, Running Tetris … seriously you can. But don’t)"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#permissions",
+    "href": "WERA-2024-Intro-SQL.html#permissions",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Permissions",
+    "text": "Permissions\n\nPermissions are how you are going to want to communicate with your IT.\nYou will need permissions (at minimum) for the server and database you want to access.\nYou can ask for read only permissions. This will mean you can only see the data, but not change it.\nIf you don’t know what you need to ask for, try setting up a meeting to describe the outcomes you’re looking for and then determine what access you’d need to achieve this."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#sql-objects",
+    "href": "WERA-2024-Intro-SQL.html#sql-objects",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "SQL Objects",
+    "text": "SQL Objects\n\nServer\n\nContains at least one database and allows for data sequestering.\n\nDatabase\n\nContains every other object.\n\nSchema\n\nUsed for organizing tables and restricting access and permissions.\n\n\n\n\nTables\n\nContains the actual data (finally!).\n\nViews\n\nLike a Table but can be created on demand for the most recent data and can be made from finalized queries.\n\n\n\n\n… and many more!"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-1-setting-up-our-sql-environment",
+    "href": "WERA-2024-Intro-SQL.html#exercise-1-setting-up-our-sql-environment",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 1 : Setting up our SQL Environment",
+    "text": "Exercise 1 : Setting up our SQL Environment\n\nWe will be using the DBeaver IDE\n\nIf you can’t there is another option.\n\nOur SQL server is built and will be run using DuckDB\nSet up DBeaver and connect it to the DuckDB file"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#steps",
+    "href": "WERA-2024-Intro-SQL.html#steps",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Steps",
+    "text": "Steps\n\n\n\n−+\n15:00\n\n\n\nIf you can’t download or use DBeaver, go to the next slide for a different option.\n\nGo to DBeaver Community Download: https://dbeaver.io/download/\nDownload it.\nOpen it on your computer.\nOnly install it for your account OR just unzip it. \n4a. You will need to download the JDBC driver.Please do so.\nNow connect to the data by going to https://github.com/jeff-p-stuinfo/wera_sql_24\nClick on the file labeled “wera-db.duckdb” and download it.\nOpen DBeaver.\nIn the upper left corner, click on the blue plug with the green plus side. \nIn the popup that appears, type in “duck”, and click on the only option. Then click “next”\n\nClick on “Open” and navigate to where you downloaded “wera-db.duckdb” and select that file. Then click Finish."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#steps-for-shell",
+    "href": "WERA-2024-Intro-SQL.html#steps-for-shell",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Steps For Shell",
+    "text": "Steps For Shell\n\nFollow steps 1 through 6 on the DBeaver instructions.\nGo to your web browser of choice (e.g., Chrome, Firefox, Edge)\nGo to https://shell.duckdb.org/.\nEnter the following one at a time.\n\n.files add wera-db.duckdb;\nATTACH 'wera-db.duckdb';\nUSE 'wera-db';"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#select-statements",
+    "href": "WERA-2024-Intro-SQL.html#select-statements",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "SELECT Statements",
+    "text": "SELECT Statements\n\nSELECT Statements tell the query which column you want in your output.\nYou can either select some columns by naming them or all of them by using the ‘*’ character.\nYou can specify DISTINCT to give unique results from your query\n\nNote1\n-- by the way, you can leave notes for yourself in the code by \n-- typing two hyphens next to each other.\nSELECT *\n\nSELECT SchoolYear,\n       graduation\n\nSELECT DISTINCT SchoolYear\nNote that you can write SELECT or select or even sElEcT (please don’t). The convention is to use all capital letters for key words."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#from-statements",
+    "href": "WERA-2024-Intro-SQL.html#from-statements",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "FROM Statements",
+    "text": "FROM Statements\n\nFROM statements tell the query which table to pull from\nYour SELECT statement won’t run without a FROM statement, but must be written before the FROM statement.\n\n/* Here's another way\nto leave a \ncomment over multiple lines */\n SELECT *\n   FROM Table1\n   \n SELECT SchoolYear\n        ,graduationrate\n   FROM graduation\n   \n SELECT DISTINCT \n        SchoolYear\n   FROM \"wera-db\".main.graduation\n\nspaces and new lines don’t matter for making the code work. The sql code can all be on one line."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#if-you-remember-nothing-else-from-this-section",
+    "href": "WERA-2024-Intro-SQL.html#if-you-remember-nothing-else-from-this-section",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "If you remember nothing else from this section",
+    "text": "If you remember nothing else from this section\n\n\n\n\n\n\nImportant\n\n\nRemember that you can get data from a table using a combination of a SELECT statement and a FROM clause."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from",
+    "href": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 2 : Select and From",
+    "text": "Exercise 2 : Select and From\n\n\n\n−+\n15:00\n\n\n\n\nSelect all the rows and columns from the enrollment table.\nWhich school years are included in the enrollment data set?\nSELECT all districts and schools from enrollment without duplicates"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-2-answers",
+    "href": "WERA-2024-Intro-SQL.html#exercise-2-answers",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 2 : Answers",
+    "text": "Exercise 2 : Answers\n-- Question 1\nSELECT * \n  FROM \"wera-db\".main.enrollment;\n\n-- Question 2\nSELECT DISTINCT SchoolYear \n  FROM \"wera-db\".main.enrollment;\n  \n-- Question 3\nSELECT DISTINCT \n       DistrictName\n       ,SchoolName \n  FROM \"wera-db\".main.enrollment;\n\nDon’t worry too much about how your code looks. As long as it runs and you can read it later, it’s fine."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#where-statements",
+    "href": "WERA-2024-Intro-SQL.html#where-statements",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "WHERE Statements",
+    "text": "WHERE Statements\n\nWHERE statements tell the query what filter conditions you want. WHERE clauses always come after the FROM Clause.\n\nNumber columns can be filtered with comparison operators =, &gt;, &lt;, !=\n\nSELECT *\n  FROM \"wera-db\".main.graduation AS g -- The AS keyword is an alias. \n                                      -- You can rename something if you \n                                      -- don't want to have to type it \n                                      -- out all the time.\n WHERE g.GraduationRate &lt; 0.1\n\nText Columns are based of characters and can also use the =, &gt;, &lt;, != operators. They can also use the LIKE keyword.\n\nSELECT *\n  FROM \"wera-db\".main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'\nThe ‘%’ character is a wildcard. It means “anything can go where this character is”."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#where-statements-part-2",
+    "href": "WERA-2024-Intro-SQL.html#where-statements-part-2",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "WHERE Statements Part 2",
+    "text": "WHERE Statements Part 2\n\nYou can also use BETWEEEN … AND to find something in a range.\n\nSELECT *\n  FROM \"wera-db\".main.graduation AS g\n WHERE g.GraduationRate BETWEEN 0.1 AND 0.5\n\nYou can also use the AND keyword to use more than one filter. (and you can use more than one AND)\n\nSELECT *\n  FROM \"wera-db\".main.graduation AS g\n WHERE g.GraduationRate BETWEEN 0.1 AND 0.5\n   AND g.StudentGroupType = 'All'"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#where-statements-part-3",
+    "href": "WERA-2024-Intro-SQL.html#where-statements-part-3",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "WHERE Statements Part 3",
+    "text": "WHERE Statements Part 3\n\nYou can filter on whether something is NULL.\n\nA NULL value says that there is no data present.\n\nFilter by saying WHERE column IS NULL\n\nSELECT DistrictName\nFROM main.enrollment\nWHERE SchoolName IS NULL\n\nYou can also filter something IS NOT NULL\n\nSELECT DistrictName\nFROM main.enrollment\nWHERE SchoolName IS NOT NULL"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#if-you-remember-nothing-else-from-this-section-1",
+    "href": "WERA-2024-Intro-SQL.html#if-you-remember-nothing-else-from-this-section-1",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "If you remember nothing else from this section",
+    "text": "If you remember nothing else from this section\n\n\n\n\n\n\nImportant\n\n\nRemember that WHERE clauses FILTER data."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#order-by",
+    "href": "WERA-2024-Intro-SQL.html#order-by",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "ORDER BY",
+    "text": "ORDER BY\n\nComes after where clause.\nSorts the data.\nCan be either ASCending or DESCending.\nExample\n\n-- Most ways\n  SELECT DISTINCT *\n    FROM \"wera-db\".main.enrollment AS e\n   WHERE e.SchoolName LIKE '%Jefferson%'\nORDER BY DistrictName DESC"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting",
+    "href": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 3 : WHERE things get interesting!",
+    "text": "Exercise 3 : WHERE things get interesting!\n\n\n\n−+\n20:00\n\n\n\n\nFind all the schools in the Seattle School District.\nFind all schools in the Seattle School District that have the name “John” in their name.\nFrom that list of schools, make the largest student count be on top. (There should only be four rows.)"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-3-answers",
+    "href": "WERA-2024-Intro-SQL.html#exercise-3-answers",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 3 : Answers",
+    "text": "Exercise 3 : Answers\n-- Question 1\nSELECT DISTINCT \n       DistrictName \n       ,SchoolName \n  FROM \"wera-db\".main.enrollment\n WHERE DistrictName = 'Seattle School District No. 1';\n \n-- Question 2\nSELECT DISTINCT \n       DistrictName \n       ,SchoolName \n  FROM \"wera-db\".main.enrollment\n WHERE DistrictName = 'Seattle School District No. 1'\n   AND SchoolName LIKE '%John%';\n\n-- Question 3\nSELECT DiSTINCT \n       DistrictName,  \n       SchoolName, \n       student_count\n  FROM \"wera-db\".main.enrollment\n WHERE DistrictName = 'Seattle School District No. 1'\n   AND SchoolName LIKE '%John%'\n   AND student_group = 'All Students'\n   AND GradeLevel  = 'All Grades'\n ORDER BY student_count DESC;"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#inline-functions",
+    "href": "WERA-2024-Intro-SQL.html#inline-functions",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Inline Functions",
+    "text": "Inline Functions\n\nIn line functions can be used in the SELECT statement\nAggregation functions allow you to do one action to many rows at the same time.\nThese are some of the common ones\n\nSUM (adds together numbers of a numeric column over a set of grouped rows)\nCOUNT (counts the number of non-blank cells in a column over a set of grouped rows)\nMIN (finds the smallest number of a numeric column over a set of grouped rows)\nMAX (finds the largest number of a numeric column over a set of grouped rows)\nAVG (finds the average of a numeric column over a set of grouped rows)\nLEFT/RIGHT (extracts the left or right characters from text)\n\nUsing one of these functions will require you to use an alias to rename the column."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#count",
+    "href": "WERA-2024-Intro-SQL.html#count",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "COUNT",
+    "text": "COUNT\n\nYou can Count a specific column. This will count all non-NULL values in that column.\nYou can Count everything with COUNT(*)\n\nSELECT COUNT(*) as record_count --This will get all of the records in the table\nFROM main.enrollment"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#group-by",
+    "href": "WERA-2024-Intro-SQL.html#group-by",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "GROUP BY",
+    "text": "GROUP BY\n\nAllows for aggregation\nYou will need each column that is not aggregated to be in the group by statement.\n\n  SELECT SchoolYear,\n         DistrictName,\n         SchoolName\n    FROM main.enrollment\nGROUP BY SchoolYear,\n         DistrictName,\n         SchoolName"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#aggregate-functions-examples",
+    "href": "WERA-2024-Intro-SQL.html#aggregate-functions-examples",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Aggregate Functions Examples",
+    "text": "Aggregate Functions Examples\n  SELECT DISTINCT \n         DistrictName\n         ,SUM(student_count) AS student_count\n    FROM \"wera-db\".main.enrollment\n   WHERE OrganizationLevel = 'School' \n     AND student_group = 'All Students' \n     AND GradeLevel = 'All Grades'\nGROUP BY DistrictName\nORDER BY record_count DESC;"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#if-you-remember-nothing-else-from-this-section-2",
+    "href": "WERA-2024-Intro-SQL.html#if-you-remember-nothing-else-from-this-section-2",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "If you remember nothing else from this section",
+    "text": "If you remember nothing else from this section\n\n\n\n\n\n\nImportant\n\n\nRemember that if you want to AGGREGATE, you will need to GROUP BY the other columns."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-4",
+    "href": "WERA-2024-Intro-SQL.html#exercise-4",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 4",
+    "text": "Exercise 4\n\n\n\n−+\n15:00\n\n\n\n\nFind the count of all districts with enrollments between 900 and 1100.\nGive the districts with counts of schools that have populations greater than 1000.\nGive the count of students by county as reported at the district level."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-4-answers",
+    "href": "WERA-2024-Intro-SQL.html#exercise-4-answers",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 4 : Answers",
+    "text": "Exercise 4 : Answers\n-- Question 1\nSELECT COUNT(*) as DistrictCount\n  FROM \"wera-db\".main.enrollment\n WHERE student_count BETWEEN 900 AND 1100 \n   AND OrganizationLevel = 'District'  \n   AND student_group = 'All Students'\n   AND GradeLevel = 'All Grades';\n\n-- Question 2\n  SELECT DistrictName, COUNT(*) as BigSchoolCount\n    FROM \"wera-db\".main.enrollment\n   WHERE student_count &gt; 1000 \n     AND OrganizationLevel = 'School' \n     AND student_group = 'All Students' \n     AND GradeLevel = 'All Grades'\nGROUP BY DistrictName \nORDER BY BigSchoolCount DESC;\n\n-- Question 3\n  SELECT County\n         ,SUM(student_count) as Student_Count \n    FROM \"wera-db\".main.enrollment\n   WHERE OrganizationLevel = 'District'\n     AND student_group = 'All Students' \n     AND GradeLevel = 'All Grades'\nGROUP BY County \nORDER BY Student_Count DESC;"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#break",
+    "href": "WERA-2024-Intro-SQL.html#break",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "BREAK",
+    "text": "BREAK\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#joins",
+    "href": "WERA-2024-Intro-SQL.html#joins",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "JOINs",
+    "text": "JOINs\n\nJOINs allow you to output data from multiple tables at the same time.\nFor the purposes of this workshop, we will focus on LEFT JOINs and INNER JOINs. There are also RIGHT JOINs and FULL OUTER JOINs.\n\nLEFT JOIN                                                                         INNER JOIN"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#join-sytax",
+    "href": "WERA-2024-Intro-SQL.html#join-sytax",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Join Sytax",
+    "text": "Join Sytax\n\nComes between FROM Clause and WHERE clause.\nThink of it as a way to expand what you’re querying from.\nYou need at least one column from each table to match ON.\n\nSELECT *\n  FROM table1\n       LEFT JOIN table2 \n              ON table1.SchoolName = table2.SchoolName"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#left-vs-inner",
+    "href": "WERA-2024-Intro-SQL.html#left-vs-inner",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "LEFT vs INNER",
+    "text": "LEFT vs INNER\n\nTHESE SHOULD BE INCREMENTAL, BUT IT’S NOT WORKING!\nUse a LEFT JOIN when you want one of your tables to be a “base”.\nThat way, you can get all the information you know you want in your base table and then just add details.\nUse an INNER JOIN when you want only those rows that are common to both.\nFor instance, if you did an INNER JOIN on enrollment and graduation, you would only have the data for schools with enrollment AND graduation data."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-5",
+    "href": "WERA-2024-Intro-SQL.html#exercise-5",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 5",
+    "text": "Exercise 5\n\n\n\n−+\n15:00\n\n\n\n\nUsing your answer to 4.2 as a reference (or ours if you didn’t finish), join in to the public directory, find the administrator.\nFind the bottom five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.\nFind schools that have enrollment but no graduation data. NEED TO MAKE THIS QUESTION DIFFERENT."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-5-answers",
+    "href": "WERA-2024-Intro-SQL.html#exercise-5-answers",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 5: Answers",
+    "text": "Exercise 5: Answers\n-- Question 1\n  SELECT E.DistrictName,\n         COUNT(*) as BigSchoolCount,\n         PD.Administrator,\n    FROM \"wera-db\".main.enrollment E\n         LEFT JOIN \"wera-db\".main.public_directory PD\n                ON E.DistrictOrganizationId = PD.DistrictOrganizationId\n                   AND PD.OrganizationLevel = 'District'\n   WHERE student_count &gt; 1000 AND\n         E.OrganizationLevel = 'School' AND\n         student_group = 'All Students' AND\n         GradeLevel = 'All Grades'\nGROUP BY E.DistrictName, PD.Administrator\nORDER BY BigSchoolCount DESC;\n   \n-- Question 2   \n  SELECT DISTINCT\n         e.SchoolYear\n         ,e.SchoolName\n         ,g.GraduationRate \n    FROM \"wera-db\".main.enrollment e\n         LEFT JOIN \"wera-db\".main.graduation g \n                ON g.SchoolOrganizationId = e.SchoolOrganizationID \n   WHERE e.student_group = 'All Students'\n     AND e.GradeLevel  = 'All Grades'\n     AND e.SchoolName != 'District Total'\n     AND g.GraduationRate IS NOT NULL\n     AND g.Cohort  = 'Four Year'\n     AND g.StudentGroupType  LIKE '%All%'\n     AND e.student_count &gt; 1000\nORDER BY g.GraduationRate    \n   \n-- Question 3   \n\nSELECT DISTINCT\n         e.SchoolYear\n         ,e.SchoolName\n         ,g.GraduationRate \n    FROM \"wera-db\".main.enrollment e\n         LEFT JOIN \"wera-db\".main.graduation g \n                ON g.SchoolOrganizationId = e.SchoolOrganizationID\n   WHERE e.student_group = 'All Students'\n     AND e.GradeLevel  = 'All Grades'\n     AND e.SchoolName != 'District Total'    \n     AND g.GraduationRate IS NULL;"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#common-table-expressions-ctes-with-keyword",
+    "href": "WERA-2024-Intro-SQL.html#common-table-expressions-ctes-with-keyword",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Common Table Expressions (CTEs) (WITH Keyword)",
+    "text": "Common Table Expressions (CTEs) (WITH Keyword)\n\nThis allows for doing queries off to the side, which is helpful when you want to do multiple things at once.\nGoes before the SELECT statement.\nExample (you can’t call an aggregate function inside of an aggregate function)\n\nWITH step1 AS (\nSELECT SchoolYear, \n       SUM(graduate)/SUM(finalcohort) AS grad_rate,\n       SUM(continuing)/SUM(finalcohort) AS continuing_rate\n  FROM \"wera-db\".main.graduation\n  WHERE studentgrouptype = 'All'\n    AND cohort = 'Four Year'\n    AND organizationlevel = 'State'\nGROUP BY SchoolYear)\nSELECT SUM(grad_rate + continuing_rate) AS combined_rate\n  FROM step1"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#example-6",
+    "href": "WERA-2024-Intro-SQL.html#example-6",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Example 6",
+    "text": "Example 6\n\n\n\n−+\n15:00\n\n\n\n\nTake the first query from Exercise 5, remove the order by clause, put it into a CTE, and then select everything from it."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#example-6-answers",
+    "href": "WERA-2024-Intro-SQL.html#example-6-answers",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Example 6: Answers",
+    "text": "Example 6: Answers\n-- Question 1\nWITH big_schools AS ( SELECT E.DistrictName,\n         COUNT(*) as BigSchoolCount,\n         PD.Administrator,\n    FROM \"wera-db\".main.enrollment E\n         LEFT JOIN \"wera-db\".main.public_directory PD\n                ON E.DistrictOrganizationId = PD.DistrictOrganizationId\n                   AND PD.OrganizationLevel = 'District'\n   WHERE student_count &gt; 1000 AND\n         E.OrganizationLevel = 'School' AND\n         student_group = 'All Students' AND\n         GradeLevel = 'All Grades'\nGROUP BY E.DistrictName, PD.Administrator)\nSELECT *\nFROM big_schools"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#resources-1",
+    "href": "WERA-2024-Intro-SQL.html#resources-1",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Resources",
+    "text": "Resources\nIf you want to learn more:\n\nW3 Schools online tutorials (https://www.w3schools.com/)\nGeeks For Geeks (https://www.geeksforgeeks.org)\nExample Google Search “W3Schools SQL how to execute based off a condition.”"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#ending",
+    "href": "WERA-2024-Intro-SQL.html#ending",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Ending",
+    "text": "Ending\nHere is the link to a form where you can tell us what we did well and how we can improve."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Advanced topics",
+    "text": "Advanced topics\nHAVING\n\nSimilar to WHERE statements, but they are used if you are filtering based off an aggregate function.\nComes after the GROUP BY clause and before the ORDER BY clause.\nIf you need to filter on a row-level criteria, use the WHERE clause.\nExample\n\n\nSELECT COUNT(*) as DistrictCount\n  FROM \"wera-db\".main.enrollment\n WHERE student_count BETWEEN 900 AND 1100\n   AND OrganizationLevel = 'District'\n   AND student_group = 'All Students'\n   AND GradeLevel = 'All Grades'\nHAVING COUNT(*) &gt; 1;\nWhich Order do these go in?\nThe list below contains all the possible keywords. We will get to all of them in this workshop.\n\n  WITH cte_name AS ()\n  SELECT DISTINCT\n         column\n         ,AGG_FUNC(column_or_expression), …\n    FROM mytable\n         JOIN another_table\n           ON mytable.column = another_table.column\n   WHERE constraint_expression\nGROUP BY column\n  HAVING constraint_expression\nORDER BY column ASC/DESC\n   LIMIT count;\nLimit the number of results\n\n\nThis is one of those areas where SQL languages will differ.\nMost languages will say “Put the LIMIT keyword after everything else and put the number of rows you want.\nMicrosoft SQL Products will have you put the TOP keyword after the SELECT Statement.\nExamples:\n\n\n-- Most ways\n\nSELECT DISTINCT *\n  FROM \"wera-db\".main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'\n LIMIT 10\n\n-- Microsoft way\n\nSELECT DISTINCT TOP 10 *\n  FROM [wera-db].main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Setting up your Database",
+    "section": "",
+    "text": "Computer (Windows/Mac/Linux)\nDBeaver SQL IDE\nCopy of the wera-db DuckDB Database file\n\n\n\n\n\nWe assume you know, generally speaking, what a computer and a database are\nNo prior knowledge of SQL is required\n\n\n\n\n\nPlease download and set up your copy of DBeaver Community version, then connect it to the DuckDB database file\nYou can download DBeaver for your own system off of the DBeaver website. (Admin access is not required to do the installation)\nDownload the wera-db.duckdb database file\nConnect DBeaver\n\nOpen DBeaver, if there is a prompt for a Windows Defender exclusion to speed things up, that is up to you. Your faithful workshop presenters did not use that option.\n\nSearch for DuckDB, select that option and click next.\n\nClick the ‘Host’ option, and open a path the wera-db.duckdb file you downloaded\n\nClick ‘Finish’. If prompted, download the JDBC driver it requests\nThank you for coming to our SQL Workshop!"
+  },
+  {
+    "objectID": "index.html#what-do-you-need-for-this-workshop",
+    "href": "index.html#what-do-you-need-for-this-workshop",
+    "title": "Setting up your Database",
+    "section": "",
+    "text": "Computer (Windows/Mac/Linux)\nDBeaver SQL IDE\nCopy of the wera-db DuckDB Database file"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Setting up your Database",
+    "section": "",
+    "text": "We assume you know, generally speaking, what a computer and a database are\nNo prior knowledge of SQL is required"
+  },
+  {
+    "objectID": "index.html#before-the-workshop-starts",
+    "href": "index.html#before-the-workshop-starts",
+    "title": "Setting up your Database",
+    "section": "",
+    "text": "Please download and set up your copy of DBeaver Community version, then connect it to the DuckDB database file\nYou can download DBeaver for your own system off of the DBeaver website. (Admin access is not required to do the installation)\nDownload the wera-db.duckdb database file\nConnect DBeaver\n\nOpen DBeaver, if there is a prompt for a Windows Defender exclusion to speed things up, that is up to you. Your faithful workshop presenters did not use that option.\n\nSearch for DuckDB, select that option and click next.\n\nClick the ‘Host’ option, and open a path the wera-db.duckdb file you downloaded\n\nClick ‘Finish’. If prompted, download the JDBC driver it requests"
+  },
+  {
     "objectID": "projects.html#project-2",
     "href": "projects.html#project-2",
     "title": "Projects",
@@ -12,12 +348,5 @@
     "title": "Projects",
     "section": "Project 3",
     "text": "Project 3"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About Me",
-    "section": "",
-    "text": "Thanks for checking out my web site!"
   }
 ]

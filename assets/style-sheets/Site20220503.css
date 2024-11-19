@@ -1,0 +1,462 @@
+﻿/**************
+CONTENTS
+    SITEWIDE
+    HEADER
+        navigation bar
+    FOOTER
+    PAGE-SPECIFIC
+        Home
+        References
+        VewSchoolOrDistrict
+**************/
+
+/***************
+    SITEWIDE
+***************/
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+section {
+    margin-top: 50px;
+}
+
+.pt-50 {
+    padding-top: 50px;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+.centerText {
+    text-align: center;
+}
+
+ul.nav-tabs {
+    margin-bottom: 30px;
+}
+
+.badge-primary {
+    background-color: #0D5761;
+}
+
+.alert-danger, .alert-warning, .alert-info, .alert-success, .alert-primary, .alert-secondary {
+    color: black;
+    font-weight: bold;
+}
+
+.btn-success {
+    background-color: #0D5761;
+    border-color: #0D5761;
+}
+
+.btn-outline-dark {
+    background-color: white;
+}
+
+.primaryColor {
+    color: #0D5761;
+}
+
+.secondaryColor {
+    color: #40403D;
+}
+
+.tertiaryColor {
+    color: #FBC639;
+}
+
+.primaryBackgroundColor, .btn-primary {
+    background-color: #0D5761;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: #0D5761;
+}
+
+.secondaryBackgroundColor {
+    background-color: #40403D;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: #40403D;
+}
+
+.tertiaryBackgroundColor {
+    background-color: #FBC639;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: #FBC639;
+    color:#40403D;
+}
+.quarternaryBackgroundColor {
+    background-color: #F7F5EB;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: #F7F5EB;
+    color: #40403D;
+}
+
+.primaryBorder {
+    border-radius: 4px;
+    border: 8px solid #0D5761;
+}
+
+.primaryBorderThin {
+    border: 1pt solid #0D5761;
+}
+
+.secondaryBorder {
+    border-radius: 4px;
+    border: 8px solid #40403D;
+}
+
+.tertiaryBorder {
+    border-radius: 4px;
+    border: 8px solid #FBC639;
+}
+
+.frostyText {
+    background-color: rgba(255,255,255,0.8);
+}
+
+
+input#organizationNameInputAutoCompleteWidget {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+select.orgPicker {
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #0D5761;
+    width: 250px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+select:focus, input[type="text"]:focus, input[type="search"]:focus, button:focus, .btn-link:focus, .reportcardtabbutton:focus, .btn-outline-dark:focus {
+    outline-style: solid;
+    outline-width: 5pt;
+    outline-color: #0D5761;
+    box-shadow: 0pt 0pt 0pt 7pt white;
+}
+
+#accessibilityCallout:focus {
+    box-shadow: 0 0 0 0.5rem rgba(0,123,255,0.5)
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link {
+    background-color: #e3e3e3;
+    border: 1px solid black;
+    color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+    .nav-tabs .nav-link:hover {
+        text-decoration: underline;
+        border-color: black;
+    }
+
+.nav-tabs .nav-link.active {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid transparent;
+    color: black;
+    background-color: white;
+}
+
+a, .btn-link {
+    color: #0070E8;
+}
+
+/***************
+    HEADER
+***************/
+
+.header {
+    background-color: #F7F5EB;
+    padding-bottom: 10px;
+}
+
+    .header .img-fluid {
+        margin-top: 10px;
+        max-height: 85px;
+    }
+
+.socialIcons {
+    list-style-type: none;
+}
+
+    .socialIcons li {
+        float: left;
+        padding-right: 7px;
+        padding-top: 10px;
+    }
+
+        .socialIcons li img {
+            width: 30px;
+            height: 30px;
+        }
+
+
+    /*navigation bar*/
+
+    #mainNavigationBar {
+        background-color: #FBC639;
+    }
+
+        #mainNavigationBar .nav-item > .nav-link {
+            color: #40403D;
+        }
+
+        #mainNavigationBar a.nav-link {
+            background-color: transparent;
+        }
+
+            #mainNavigationBar a.nav-link:hover {
+                text-decoration: none;
+            }
+
+        #mainNavigationBar .nav-item {
+            padding-left: 5px;
+        }
+
+            #mainNavigationBar .nav-item:hover {
+                background: #FFDC79;
+            }
+
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #40403D;
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 3px;
+    }
+
+    .change .bar1 {
+        -webkit-transform: scale(0.5) rotate(45deg) translate(34px, 19px);
+        transform: scale(0.5) rotate(45deg) translate(34px, 19px);
+    }
+
+    .change .bar2 {
+        -webkit-transform: rotate(-45deg) translate(-10px, 0px) scale(0.5);
+        transform: rotate(-45deg) translate(-10px, 0px) scale(0.5);
+    }
+
+    .change .bar3 {
+        -webkit-transform: scale(0.5) rotate(45deg) translate(0px, -12px);
+        transform: scale(0.5) rotate(45deg) translate(0px, -12px);
+    }
+
+/***************
+    FOOTER
+***************/
+
+footer h2 {
+    font-size: 1.25rem;
+}
+
+.referencesLinkGroup a {
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#tagline {
+    font-style: italic;
+    text-align: center;
+}
+
+.goog-te-gadget .goog-te-combo {
+    border-radius: 15px;
+    padding: 8px;
+    border: 2px solid #0D5761;
+    font-size: 130%;
+}
+
+#goog-gt-tt div.original-text, .gt-hl-layer {
+    text-align: left;
+}
+
+footer .btn-link
+{
+    color:#40403D;
+    text-decoration:underline;
+}
+
+footer #contactInformation p {
+    color: white;
+}
+
+.websiteVersionTextColor {
+    color: #cccccc;
+    font-size: .8em;
+    margin: 1px;
+}
+
+/***************
+    PAGE-SPECIFIC 
+***************/
+
+/* Home */
+
+.appTitle {
+    font-size: 1.75rem;
+}
+
+#heroImage {
+    position: relative;
+    color: black;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.bottom-centered {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    padding: 10px;
+}
+
+#featureCallout h2, #featureCallout p, #updateCallout h2, #updateCallout p, #accessibilityCallout h2, #accessibilityCallout p {
+    padding-left: 10px;
+}
+
+li.autocompleteLink:hover > a {
+    color: white;
+}
+
+li.autocompleteLink i {
+    color: green;
+}
+
+li.autocompleteLink:hover i {
+    color: white;
+}
+
+/*References*/
+button.dt-button {
+    border-radius: 10px;
+    background-image: none;
+    background-color: white;
+    border: 1px solid #0D5761;
+}
+
+    button.dt-button > span {
+        color: #0D5761;
+        font-weight: bold;
+    }
+
+    button.dt-button:hover{
+        border-radius: 10px;
+        background-image: none;
+        background-color: #e3e3e3;
+        border: 1px solid #0D5761;
+    }
+
+td {
+    vertical-align: top !important;
+}
+
+    td, td.sorting_1 {
+        margin-bottom: 10px !important;
+    }
+
+
+/* ViewSchoolorDistrict */
+
+@media only screen and (max-width: 375px) {
+    iframe {
+        max-width: 360px;
+    }
+}
+
+.triangle-isosceles h3 {
+    font-size: 1.25rem;
+}
+
+.navbar-toggler i{
+    color: #40403D;
+}
+
+.spinner i {
+    color: #0D5761;
+}
+
+div iframe {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+li.ui-menu-item:hover {
+    background-color: #007fff;
+    color: white;
+}
+
+#measureMenu {
+    overflow: auto;
+}
+
+    #measureMenu > li.nav-item > .nav-link {
+        background-color: white;
+    }
+
+        #measureMenu > li.nav-item > .nav-link.active {
+            text-decoration: underline;
+            font-weight: bold;
+            color: #0D5761;
+        }
+
+.tooltip-inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: black;
+    text-align: center;
+    background-color: white;
+    border-radius: .25rem;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+    margin-left: -3px;
+    content: "";
+    border-width: 5px 5px 0;
+    border-top-color: #40403D;
+}
+
+
+div.rctabs, div.rcbuttongroup {
+    text-align: center;
+}
+
+.btn-group > button.active {
+    background-color: #0D5761;
+    color: white;
+}
+
+.orgInfo {
+    background-color: #f2f2f2;
+    color: #0D5761;
+}

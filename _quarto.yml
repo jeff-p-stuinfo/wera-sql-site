@@ -9,12 +9,14 @@ website:
       - href: index.qmd
         text: Workshop Home
       - projects.qmd
+      - WERA-2024-Intro-SQL.qmd
+      - text: Workshop Slides
+
     tools:
       - icon: github
         href: https://github.com/jeff-p-stuinfo/wera-sql-site
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"
-
 format:
   html:
     theme: sandstone

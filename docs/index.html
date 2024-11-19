@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About Me – WERA 2024 Workshop - Intro to SQL for Education</title>
+<title>Setting up your Database – WERA 2024 Workshop - Intro to SQL for Education</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,6 +94,15 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./WERA-2024-Intro-SQL.html"> 
+<span class="menu-text">WERA 2024 SQL Workshop</span></a>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Workshop Slides</span>
+    </span>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -115,28 +124,52 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-about-broadside column-page">
   <div class="about-main">
-    <div class="about-entity" style="background-image: url('img/profile.png')"></div>
+    <div class="about-entity" style="background-image: url('assets/images/presentation-chalkboard.png')"></div>
     <div class="about-contents"><header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Me</h1>
+<h1 class="title">Setting up your Database</h1>
 </div>
 <div class="quarto-title-meta">
   </div>
-</header><div id="me">
-<section id="goals" class="level2">
-<h2 data-anchor-id="goals">Goals</h2>
-</section>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
+</header><div id="setup" class="smaller">
+<section id="what-do-you-need-for-this-workshop" class="level2">
+<h2 data-anchor-id="what-do-you-need-for-this-workshop">What do you need for this workshop?</h2>
+<ul>
+<li>Computer (Windows/Mac/Linux)</li>
+<li>DBeaver SQL IDE</li>
+<li>Copy of the wera-db DuckDB Database file</li>
+</ul>
 </section>
 <section id="experience" class="level2">
 <h2 data-anchor-id="experience">Experience</h2>
+<ul>
+<li>We assume you know, generally speaking, what a computer and a database are</li>
+<li>No prior knowledge of SQL is required</li>
+</ul>
+</section>
+<section id="before-the-workshop-starts" class="level2">
+<h2 data-anchor-id="before-the-workshop-starts">Before the Workshop Starts</h2>
+<ul>
+<li>Please download and set up your copy of DBeaver Community version, then connect it to the DuckDB database file</li>
+<li>You can download DBeaver for your own system off of the <a href="https://dbeaver.io/download/">DBeaver website</a>. (Admin access is not required to do the installation)</li>
+<li>Download the wera-db.duckdb database file</li>
+<li>Connect DBeaver
+<ul>
+<li>Open DBeaver, if there is a prompt for a Windows Defender exclusion to speed things up, that is up to you. Your faithful workshop presenters did not use that option.<br>
+<img src="assets/images/new_database_connection.PNG" class="img-fluid" alt="Screenshot showing the button to add a new database connection"></li>
+<li>Search for DuckDB, select that option and click next.<br>
+<img src="assets/images/DBeaver_Step9.png" class="img-fluid" alt="Image showing how to search for and select DuckDB database type"></li>
+<li>Click the ‘Host’ option, and open a path the wera-db.duckdb file you downloaded<br>
+<img src="assets/images/DBeaver_Connection_SetUp.png" class="img-fluid" alt="Finish the DuckDB connection setup by browsing for and selecting the database file"></li>
+<li>Click ‘Finish’. If prompted, download the JDBC driver it requests</li>
+</ul></li>
+</ul>
 </section>
 </div></div>
   </div>
 </div>
 
-<p>Thanks for checking out my web site!</p>
+<p>Thank you for coming to our SQL Workshop!</p>
 
 
 

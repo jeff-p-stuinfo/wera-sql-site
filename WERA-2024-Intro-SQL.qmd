@@ -1,0 +1,853 @@
+---
+title: "WERA 2024 SQL Workshop"
+subtitle: ""
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    logo: assets/images/ospilogo.png
+    css: assets/style-sheets/bootstrap.min.css
+---
+
+```{r}
+library(countdown, quietly = F)
+```
+
+## As you come in
+
+-   Make sure you have access to the presentation. <https://github.com/jeff-p-stuinfo/wera_sql_24>
+-   Connect to the database <a href="#/12">(click here for instructions)</a>
+
+## Introductions {.smaller .scrollable}
+
+We are Cameron Marsden and Jeff Pannell. We are senior data analysts at OSPI. We work on the Report Card. Combined we have 13 years of SQL experience.
+
+Introduce yourself!
+
+-   What is your name?
+
+-   What do you do?
+
+-   What is your experience with SQL?
+
+-   How do you work with data?
+
+    -   What kind of data do you work with?
+
+## Agenda and Structure {.smaller .scrolling}
+
+::: smaller
+-   Overview of what SQL is. (Lecture)
+    -   SQL Flavors
+    -   Objects
+    -   Queries
+-   Hands on exercises on how to do SQL coding.
+    -   Basic Queries
+    -   Use Cases
+-   There will be breaks!
+-   Parking Lot
+    -   If you have questions, write it on a sticky note, and then put it on the big paper on the side of the room
+:::
+
+## Target Audience
+
+-   New coders to late beginners.
+
+If you find that you're finishing the exercises early, try helping your neighbor (if asked). Trying to explain why what you did worked can help you learn.
+
+## Resources {.smaller}
+
+If you want to learn more:
+
+-   W3 Schools online tutorials (https://www.w3schools.com/)
+
+-   Geeks For Geeks (https://www.geeksforgeeks.org)
+
+-   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](assets/images/W3Schools_Example_Search.png)
+
+## What is SQL? {.smaller}
+
+-   SQL is a Structured Query Language.
+-   You don't need to know where the data is stored on the hard drive, you just need to know which table it's in and how to describe it.
+-   It comes in many flavors
+    -   DuckDB
+    -   PostgreSQL
+    -   Microsft SQL Server (Transact-SQL a.k.a. T-SQL)
+    -   SQLite
+    -   MySQL
+    -   Oracle SQL
+
+## SQL Definition (continued)
+
+-   All of these flavors are based off the most recent version of an international standard. This makes it so that the vast majority of what you can do in one language, you can do in every language.
+-   We will be focusing on the commonalities between the languages in this workshop.
+
+## SQL Use Cases
+
+-   As a centralized data storage solution
+
+-   As a data source for reports.
+
+-   Compute calculations on data and store for easy and convenient access.
+
+-   Find statistics on your data without external tools.
+
+-   Conduct data exploration to better understand your data.
+
+-   Other Advanced uses (Partitions, Conditional Statements, Running Tetris ... seriously you can. But don't)
+
+## Permissions
+
+-   Permissions are how you are going to want to communicate with your IT.
+-   You will need permissions (at minimum) for the server and database you want to access.
+-   You can ask for read only permissions. This will mean you can only see the data, but not change it.
+-   If you don't know what you need to ask for, try setting up a meeting to describe the outcomes you're looking for and then determine what access you'd need to achieve this.
+
+## SQL Objects {.scrollable .smaller}
+
+-   Server
+    -   Contains at least one database and allows for data sequestering.
+-   Database
+    -   Contains every other object.
+-   Schema
+    -   Used for organizing tables and restricting access and permissions.
+
+::: {.fragment .highlight-red}
+-   ***Tables***
+
+    -   Contains the actual data (finally!).
+
+-   ***Views***
+
+    -   Like a Table but can be created on demand for the most recent data and can be made from finalized queries.
+:::
+
+-   ... and many more!
+
+## Exercise 1 : Setting up our SQL Environment
+
+-   We will be using the DBeaver IDE
+    -   If you can't there is another option.
+-   Our SQL server is built and will be run using DuckDB
+-   Set up DBeaver and connect it to the DuckDB file
+
+## Steps {.scrollable .smaller}
+
+```{r}
+countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
+```
+
+[If you can't download or use DBeaver, go to the next slide for a different option.]{style="text-decoration: underline;"}
+
+1.  Go to DBeaver Community Download: <https://dbeaver.io/download/>
+
+2.  Download it.
+
+3.  Open it on your computer.
+
+4.  Only install it for your account OR just unzip it. 
+
+    4a. You will need to download the JDBC driver.Please do so.
+
+5.  Now connect to the data by going to <https://github.com/jeff-p-stuinfo/wera_sql_24>
+
+6.  Click on the file labeled "wera-db.duckdb" and download it.
+
+7.  Open DBeaver.
+
+8.  In the upper left corner, click on the blue plug with the green plus side. ![](assets/images/dbeaver_step8.png)
+
+9.  In the popup that appears, type in "duck", and click on the only option. Then click "next"\
+    ![](assets/images/dbeaver_step9.png)
+
+10. Click on "Open" and navigate to where you downloaded "wera-db.duckdb" and select that file. Then click Finish.
+
+## Steps For Shell {.smaller .scrollable}
+
+1.  Follow steps 1 through 6 on the DBeaver instructions.
+2.  Go to your web browser of choice (e.g., Chrome, Firefox, Edge)
+3.  Go to <https://shell.duckdb.org/>.
+4.  Enter the following one at a time.
+
+``` sql
+.files add wera-db.duckdb;
+ATTACH 'wera-db.duckdb';
+USE 'wera-db';
+```
+
+## SELECT Statements {.smaller}
+
+-   SELECT Statements tell the query which column you want in your output.
+-   You can either select some columns by naming them or all of them by using the '\*' character.
+-   You can specify DISTINCT to give unique results from your query
+
+Note[^1]
+
+[^1]: Note that you can write `SELECT` or `select` or even `sElEcT` (please don't). The convention is to use all capital letters for key words.
+
+``` sql
+-- by the way, you can leave notes for yourself in the code by 
+-- typing two hyphens next to each other.
+SELECT *
+
+SELECT SchoolYear,
+       graduation
+
+SELECT DISTINCT SchoolYear
+```
+
+## FROM Statements {.smaller}
+
+-   FROM statements tell the query which table to pull from
+-   Your SELECT statement won't run without a FROM statement, but must be written before the FROM statement.
+
+``` sql
+/* Here's another way
+to leave a 
+comment over multiple lines */
+ SELECT *
+   FROM Table1
+   
+ SELECT SchoolYear
+        ,graduationrate
+   FROM graduation
+   
+ SELECT DISTINCT 
+        SchoolYear
+   FROM "wera-db".main.graduation
+```
+
+::: footer
+spaces and new lines don't matter for making the code work. The sql code can all be on one line.
+:::
+
+## If you remember nothing else from this section
+
+::: callout-important
+Remember that you can get data from a table using a combination of a SELECT statement and a FROM clause.
+:::
+
+## Exercise 2 : Select and From (Part 1)
+
+```{r}
+countdown(minutes = 5, seconds = 0, bottom = 0)
+```
+
+1.  Select all the rows and columns from the enrollment table.
+
+::: footer
+It would be a real shame if somebody left a handy [select syntax reference link](https://www.w3schools.com/SQL/sql_select.asp) here.
+:::
+
+## Exercise 2 : Select and From (Part 2)
+
+```{r}
+countdown(minutes = 5, seconds = 0, bottom = 0)
+```
+
+1.  Select all the rows and columns from the enrollment table.
+2.  Which school years are included in the enrollment data set?
+
+::: footer
+Wait, this is the same [select syntax reference link](https://www.w3schools.com/SQL/sql_select.asp) as the last slide!
+:::
+
+## Exercise 2 : Select and From (Part 3)
+
+```{r}
+countdown(minutes = 5, seconds = 0, bottom = 0)
+```
+
+1.  Select all the rows and columns from the enrollment table.
+2.  Which school years are included in the enrollment data set?
+3.  SELECT all districts and schools from enrollment without duplicates
+
+::: footer
+This link seems DISTINCT from the other two [select syntax reference links](https://www.w3schools.com/SQL/sql_distinct.asp).
+:::
+
+## Exercise 2 : Answers
+
+``` sql
+-- Question 1
+SELECT * 
+  FROM "wera-db".main.enrollment;
+
+-- Question 2
+SELECT DISTINCT SchoolYear 
+  FROM "wera-db".main.enrollment;
+  
+-- Question 3
+SELECT DISTINCT 
+       DistrictName
+       ,SchoolName 
+  FROM "wera-db".main.enrollment;
+```
+
+::: footer
+Don't worry too much about how your code looks. As long as it runs and you can read it later, it's fine. If you want very well organized code that can take some time and effort. Jeff recommends giving it to Cameron to write.
+:::
+
+## WHERE Statements {.smaller .scrollable}
+
+-   WHERE statements tell the query what filter conditions you want. WHERE clauses always come after the FROM Clause.
+
+    -   Number columns can be filtered with comparison operators =, \>, \<, !=
+
+    ``` sql
+    SELECT *
+      FROM "wera-db".main.graduation AS g -- The AS keyword is an alias. 
+                                          -- You can rename something if you 
+                                          -- don't want to have to type it 
+                                          -- out all the time.
+     WHERE g.GraduationRate < 0.1
+    ```
+
+    -   Text Columns are based of characters and can also use the =, \>, \<, != operators. They can also use the LIKE keyword.
+
+    ``` sql
+    SELECT *
+      FROM "wera-db".main.enrollment AS e
+     WHERE e.SchoolName LIKE '%Jefferson%'
+    ```
+
+-   The '%' character is a wildcard. It means "anything can go where this character is".
+
+## WHERE Statements Part 2
+
+-   You can also use **BETWEEEN** ... **AND** to find something in a range.
+
+``` sql
+SELECT *
+  FROM "wera-db".main.graduation AS g
+ WHERE g.GraduationRate BETWEEN 0.1 AND 0.5
+```
+
+-   You can also use the **AND** keyword to use more than one filter. (and you can use more than one **AND**)
+
+``` sql
+SELECT *
+  FROM "wera-db".main.graduation AS g
+ WHERE g.GraduationRate BETWEEN 0.1 AND 0.5
+   AND g.StudentGroupType = 'All'
+```
+
+## WHERE Statements Part 3
+
+-   You can filter on whether something is **NULL**.
+    -   A **NULL** value says that there is no data present.
+-   Filter by saying WHERE column IS NULL
+
+``` sql
+SELECT DistrictName
+FROM main.enrollment
+WHERE SchoolName IS NULL
+```
+
+-   You can also filter something **IS NOT NULL**
+
+``` sql
+SELECT DistrictName
+FROM main.enrollment
+WHERE SchoolName IS NOT NULL
+```
+
+## If you remember nothing else from this section
+
+::: callout-important
+Remember that WHERE clauses FILTER data.
+:::
+
+## ORDER BY {.scrollable .smaller}
+
+-   Comes after where clause.
+-   Sorts the data.
+-   Can be either **ASC**ending or **DESC**ending.
+-   Example
+
+``` sql
+-- Most ways
+  SELECT DISTINCT *
+    FROM "wera-db".main.enrollment AS e
+   WHERE e.SchoolName LIKE '%Jefferson%'
+ORDER BY DistrictName DESC
+```
+
+## Exercise 3 : WHERE things get interesting! (Part 1)
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Find all the schools in the Seattle School District.
+
+::: footer
+This is WHERE somebody left a [handy reference link to WHERE clauses](https://www.w3schools.com/SQL/sql_where.asp) again.
+:::
+
+## Exercise 3 : WHERE things get interesting! (Part 2)
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Find all the schools in the Seattle School District.
+
+2.  Find all schools in the Seattle School District that have "Elementary" in their name.
+
+::: footer
+WHERE could a person find a [helpful reference for questions LIKE we have above](https://www.w3schools.com/SQL/sql_like.asp)?
+:::
+
+## Exercise 3 : WHERE things get interesting! (Part 3)
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Find all the schools in the Seattle School District.
+
+2.  Find all schools in the Seattle School District that have "Elementary" in their name.
+
+3.  From that list of schools, make the largest student count be on top. (Extra credit! LIMIT the results to 5)
+
+::: footer
+All these references are completely out of [ORDER](https://www.w3schools.com/SQL/sql_orderby.asp)?
+:::
+
+## Exercise 3 : Answers
+
+``` sql
+-- Question 1
+SELECT DISTINCT 
+       DistrictName 
+       ,SchoolName 
+  FROM "wera-db".main.enrollment
+ WHERE DistrictName = 'Seattle School District No. 1';
+ 
+-- Question 2
+SELECT DISTINCT 
+       DistrictName 
+       ,SchoolName 
+  FROM "wera-db".main.enrollment
+ WHERE DistrictName = 'Seattle School District No. 1'
+   AND SchoolName LIKE '%Elementary%';
+
+-- Question 3
+SELECT DiSTINCT 
+       DistrictName,  
+       SchoolName, 
+       student_count
+  FROM "wera-db".main.enrollment
+ WHERE DistrictName = 'Seattle School District No. 1'
+   AND SchoolName LIKE '%Elementary%'
+   AND student_group = 'All Students'
+   AND GradeLevel  = 'All Grades'
+ ORDER BY student_count DESC;
+ 
+-- Extra Credit! Use this as the final line on Question 3
+LIMIT 5;
+```
+
+## Inline Functions {.smaller}
+
+-   In line functions can be used in the SELECT statement
+-   Aggregation functions allow you to do one action to many rows at the same time.
+-   These are some of the common ones
+    -   SUM (adds together numbers of a numeric column over a set of grouped rows)
+    -   COUNT (counts the number of non-blank cells in a column over a set of grouped rows)
+    -   MIN (finds the smallest number of a numeric column over a set of grouped rows)
+    -   MAX (finds the largest number of a numeric column over a set of grouped rows)
+    -   AVG (finds the average of a numeric column over a set of grouped rows)
+    -   LEFT/RIGHT (extracts the left or right characters from text)
+-   Using one of these functions will require you to use an alias to rename the column.
+
+## COUNT
+
+-   You can Count a specific column. This will count all non-NULL values in that column.
+-   You can Count *everything* with COUNT(\*)
+
+``` sql
+SELECT COUNT(*) as record_count --This will get all of the records in the table
+FROM main.enrollment
+```
+
+## GROUP BY
+
+-   Allows for aggregation
+-   You will need each column that is not aggregated to be in the group by statement.
+
+``` sql
+  SELECT SchoolYear,
+         DistrictName,
+         SchoolName
+    FROM main.enrollment
+GROUP BY SchoolYear,
+         DistrictName,
+         SchoolName  
+```
+
+## Aggregate Functions Examples
+
+``` {.sql code-line-numbers="|3|8"}
+  SELECT DISTINCT 
+         DistrictName
+         ,SUM(student_count) AS student_count
+    FROM "wera-db".main.enrollment
+   WHERE OrganizationLevel = 'School' 
+     AND student_group = 'All Students' 
+     AND GradeLevel = 'All Grades'
+GROUP BY DistrictName
+ORDER BY record_count DESC;
+```
+
+## If you remember nothing else from this section
+
+::: callout-important
+Remember that if you want to AGGREGATE, you will need to GROUP BY the other columns.
+:::
+
+## Exercise 4 (Part 1) {.smaller}
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Find the count of all districts with enrollments between 900 and 1100.
+
+::: footer
+[BETWEEN](https://www.w3schools.com/SQL/sql_between.asp) this exercise and the next one, it's hard to know what reference to [COUNT](https://www.w3schools.com/SQL/sql_count.asp) on.
+:::
+
+## Exercise 4 (Part 2) {.smaller}
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Find the count of all districts with enrollments between 900 and 1100.
+2.  Give the districts with counts of schools that have populations greater than 1000.
+
+::: footer
+We can [COUNT](https://www.w3schools.com/SQL/sql_count.asp) on this reference being [GREATER THAN](https://www.w3schools.com/SQl/sql_where.asp) the last one.
+:::
+
+## Exercise 4 (Part 3) {.smaller}
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Find the count of all districts with enrollments between 900 and 1100.
+2.  Give the districts with counts of schools that have populations greater than 1000.
+3.  Give the number of students by county as reported at the district level.
+
+::: footer
+This is a tricky question, but there has to be [SUM](https://www.w3schools.com/SQl/sql_sum.asp) operator we can use
+:::
+
+## Exercise 4 : Answers
+
+``` sql
+-- Question 1
+SELECT COUNT(*) as DistrictCount
+  FROM "wera-db".main.enrollment
+ WHERE student_count BETWEEN 900 AND 1100 
+   AND OrganizationLevel = 'District'  
+   AND student_group = 'All Students'
+   AND GradeLevel = 'All Grades';
+
+-- Question 2
+  SELECT DistrictName, COUNT(*) as BigSchoolCount
+    FROM "wera-db".main.enrollment
+   WHERE student_count > 1000 
+     AND OrganizationLevel = 'School' 
+     AND student_group = 'All Students' 
+     AND GradeLevel = 'All Grades'
+GROUP BY DistrictName 
+ORDER BY BigSchoolCount DESC;
+
+-- Question 3
+  SELECT County
+         ,SUM(student_count) as Student_Count 
+    FROM "wera-db".main.enrollment
+   WHERE OrganizationLevel = 'District'
+     AND student_group = 'All Students' 
+     AND GradeLevel = 'All Grades'
+GROUP BY County 
+ORDER BY Student_Count DESC;
+```
+
+## BREAK
+
+![Image references may expire, unlike Kit Kat bars.](images/kitkat.png){fig-alt="A Kit Kat bar" width="500"}
+
+```{r}
+countdown(minutes = 10, seconds = 0, top = 50, bottom = 0, right = 0)
+```
+
+## JOINs {.smaller .scrollable}
+
+-   JOINs allow you to output data from multiple tables at the same time.
+-   For the purposes of this workshop, we will focus on LEFT JOINs and INNER JOINs. There are also RIGHT JOINs and FULL OUTER JOINs.
+
+LEFT JOIN                                                                         INNER JOIN
+
+![LEFT JOIN](assets/images/left_outer_join.png){width="45%"} ![INNER JOIN](assets/images/inner_join.png){width="45%"} <!-- The titles can places with absolute positioning -->
+
+## Join Sytax
+
+-   Comes between FROM Clause and WHERE clause.
+-   Think of it as a way to expand what you're querying from.
+-   You need at least one column from each table to match **ON**.
+
+``` sql
+SELECT *
+  FROM table1
+       LEFT JOIN table2 
+              ON table1.SchoolName = table2.SchoolName
+```
+
+## LEFT vs INNER {.smaller .incremental}
+
+-   ***THESE SHOULD BE INCREMENTAL, BUT IT'S NOT WORKING!***
+-   Use a LEFT JOIN when you want one of your tables to be a "base".
+-   That way, you can get all the information you know you want in your base table and then just add details.
+-   Use an INNER JOIN when you want only those rows that are common to both.
+-   For instance, if you did an INNER JOIN on enrollment and graduation, you would only have the data for schools with enrollment **AND** graduation data.
+
+## Exercise 5 (Part 1)
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Using your answer to 4.2 as a reference (you can use ours if you didn't finish), join in to the public directory, find the administrator.
+
+``` sql
+-- Example Syntax from 4.2
+
+  SELECT DistrictName, COUNT(*) as BigSchoolCount
+    FROM "wera-db".main.enrollment
+   WHERE student_count > 1000 
+     AND OrganizationLevel = 'School' 
+     AND student_group = 'All Students' 
+     AND GradeLevel = 'All Grades'
+GROUP BY DistrictName 
+ORDER BY BigSchoolCount DESC;
+```
+
+::: footer
+Fun fact! People who learn SQL are never lonely at lunch because they know how to [JOIN](https://www.w3schools.com/SQl/sql_join_left.asp) tables.
+:::
+
+## Exercise 5 (Part 2)
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Using your answer to 4.2 as a reference (you can use ours if you didn't finish), join in to the public directory, find the administrator.
+2.  Using your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.
+
+::: footer
+Fun fact! People who learn SQL are never lonely at lunch because they know how to [JOIN](https://www.w3schools.com/SQl/sql_join_left.asp) tables.
+:::
+
+## Exercise 5 (Part 3)
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Using your answer to 4.2 as a reference (you can use ours if you didn't finish), join in to the public directory, find the administrator.
+2.  Using your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.
+3.  Find schools that have enrollment but no graduation data. (Fun fact! You can't use = to find NULL values. There must be some other way to find out what IS NULL. Hmmm...)
+
+## Exercise 5: Answers
+
+``` sql
+-- Question 1
+  SELECT E.DistrictName,
+         COUNT(*) as BigSchoolCount,
+         PD.Administrator,
+    FROM "wera-db".main.enrollment E
+         LEFT JOIN "wera-db".main.public_directory PD
+                ON E.DistrictOrganizationId = PD.DistrictOrganizationId
+                   AND PD.OrganizationLevel = 'District'
+   WHERE student_count > 1000 AND
+         E.OrganizationLevel = 'School' AND
+         student_group = 'All Students' AND
+         GradeLevel = 'All Grades'
+GROUP BY E.DistrictName, PD.Administrator
+ORDER BY BigSchoolCount DESC;
+   
+-- Question 2   
+  SELECT DISTINCT
+         e.SchoolYear
+         ,e.SchoolName
+         ,g.GraduationRate 
+    FROM "wera-db".main.enrollment e
+         LEFT JOIN "wera-db".main.graduation g 
+                ON g.SchoolOrganizationId = e.SchoolOrganizationID 
+   WHERE e.student_group = 'All Students'
+     AND e.GradeLevel  = 'All Grades'
+     AND e.SchoolName != 'District Total'
+     AND g.GraduationRate IS NOT NULL
+     AND g.Cohort  = 'Four Year'
+     AND g.StudentGroupType  LIKE '%All%'
+     AND e.student_count > 1000
+ORDER BY g.GraduationRate DESC    
+   
+-- Question 3   
+
+SELECT DISTINCT
+         e.SchoolYear
+         ,e.SchoolName
+         ,g.GraduationRate 
+    FROM "wera-db".main.enrollment e
+         LEFT JOIN "wera-db".main.graduation g 
+                ON g.SchoolOrganizationId = e.SchoolOrganizationID
+   WHERE e.student_group = 'All Students'
+     AND e.GradeLevel  = 'All Grades'
+     AND e.SchoolName != 'District Total'    
+     AND g.GraduationRate IS NULL;
+```
+
+## Common Table Expressions (CTEs) (WITH Keyword) {.smaller}
+
+-   This allows for doing queries off to the side, which is helpful when you want to do multiple things at once.
+-   Goes before the SELECT statement.
+-   Example (you can't call an aggregate function inside of an aggregate function)
+
+``` {.sql code-line-numbers="|1-9|10-11"}
+WITH step1 AS (
+SELECT SchoolYear, 
+       SUM(graduate)/SUM(finalcohort) AS grad_rate,
+       SUM(continuing)/SUM(finalcohort) AS continuing_rate
+  FROM "wera-db".main.graduation
+  WHERE studentgrouptype = 'All'
+    AND cohort = 'Four Year'
+    AND organizationlevel = 'State'
+GROUP BY SchoolYear)
+SELECT SUM(grad_rate + continuing_rate) AS combined_rate
+  FROM step1
+```
+
+## Exercise 6
+
+```{r}
+countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Take the first query from Exercise 5, remove the order by clause, put it into a CTE, and then select everything from it.
+
+::: footer
+Some people really like the [CTE](https://www.geeksforgeeks.org/cte-in-sql/), but I prefer the mountains.
+:::
+## Example 6: Answers
+
+``` sql
+-- Question 1
+WITH big_schools AS ( SELECT E.DistrictName,
+         COUNT(*) as BigSchoolCount,
+         PD.Administrator,
+    FROM "wera-db".main.enrollment E
+         LEFT JOIN "wera-db".main.public_directory PD
+                ON E.DistrictOrganizationId = PD.DistrictOrganizationId
+                   AND PD.OrganizationLevel = 'District'
+   WHERE student_count > 1000 AND
+         E.OrganizationLevel = 'School' AND
+         student_group = 'All Students' AND
+         GradeLevel = 'All Grades'
+GROUP BY E.DistrictName, PD.Administrator)
+SELECT *
+FROM big_schools
+```
+
+## Resources {.smaller}
+
+If you want to learn more:
+
+-   W3 Schools online tutorials (https://www.w3schools.com/)
+
+-   Geeks For Geeks (https://www.geeksforgeeks.org)
+
+-   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](assets/images/W3Schools_Example_Search.png)
+
+## Ending
+
+Here is the link to a form where you can tell us what we did well and how we can improve.
+
+## Advanced topics {.smaller .scrollable}
+
+#### HAVING
+
+-   Similar to WHERE statements, but they are used if you are filtering based off an aggregate function.
+
+-   Comes after the GROUP BY clause and before the ORDER BY clause.
+
+-   If you need to filter on a row-level criteria, use the WHERE clause.
+
+-   Example
+
+``` sql
+
+SELECT COUNT(*) as DistrictCount
+  FROM "wera-db".main.enrollment
+ WHERE student_count BETWEEN 900 AND 1100
+   AND OrganizationLevel = 'District'
+   AND student_group = 'All Students'
+   AND GradeLevel = 'All Grades'
+HAVING COUNT(*) > 1;
+```
+
+#### Which Order do these go in?
+
+The list below contains *all* the possible keywords. We will get to all of them in this workshop.
+
+``` sql
+
+  WITH cte_name AS ()
+  SELECT DISTINCT
+         column
+         ,AGG_FUNC(column_or_expression), …
+    FROM mytable
+         JOIN another_table
+           ON mytable.column = another_table.column
+   WHERE constraint_expression
+GROUP BY column
+  HAVING constraint_expression
+ORDER BY column ASC/DESC
+   LIMIT count;
+```
+
+#### Limit the number of results {.scrollable .smaller}
+
+::: {.scrollable .smaller}
+-   This is one of those areas where SQL languages will differ.
+
+-   Most languages will say "Put the LIMIT keyword after everything else and put the number of rows you want.
+
+-   Microsoft SQL Products will have you put the TOP keyword after the SELECT Statement.
+
+-   Examples:
+
+``` sql
+
+-- Most ways
+
+SELECT DISTINCT *
+  FROM "wera-db".main.enrollment AS e
+ WHERE e.SchoolName LIKE '%Jefferson%'
+ LIMIT 10
+
+-- Microsoft way
+
+SELECT DISTINCT TOP 10 *
+  FROM [wera-db].main.enrollment AS e
+ WHERE e.SchoolName LIKE '%Jefferson%'
+```
+:::
