@@ -1,6 +1,5 @@
 ---
 title: "WERA 2024 SQL Workshop"
-subtitle: "New Subtitle!"
 format:
   revealjs: 
     slide-number: true

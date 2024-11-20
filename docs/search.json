@@ -357,25 +357,25 @@
     "text": "Ending\nHere is the link to a form where you can tell us what we did well and how we can improve."
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---having",
-    "href": "WERA-2024-Intro-SQL.html#advanced-topics---having",
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics--",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics--",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Advanced topics - Having",
-    "text": "Advanced topics - Having\n\nSimilar to WHERE statements, but they are used if you are filtering based off an aggregate function.\nComes after the GROUP BY clause and before the ORDER BY clause.\nIf you need to filter on a row-level criteria, use the WHERE clause.\n\nSELECT COUNT(*) as DistrictCount\n  FROM \"wera-db\".main.enrollment\n WHERE student_count BETWEEN 900 AND 1100\n   AND OrganizationLevel = 'District'\n   AND student_group = 'All Students'\n   AND GradeLevel = 'All Grades'\nHAVING COUNT(*) &gt; 1;"
+    "section": "Advanced topics -",
+    "text": "Advanced topics -\nHaving\n\nSimilar to WHERE statements, but they are used if you are filtering based off an aggregate function.\nComes after the GROUP BY clause and before the ORDER BY clause.\nIf you need to filter on a row-level criteria, use the WHERE clause.\n\nSELECT COUNT(*) as DistrictCount\n  FROM \"wera-db\".main.enrollment\n WHERE student_count BETWEEN 900 AND 1100\n   AND OrganizationLevel = 'District'\n   AND student_group = 'All Students'\n   AND GradeLevel = 'All Grades'\nHAVING COUNT(*) &gt; 1;"
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---which-order-do-these-go-in",
-    "href": "WERA-2024-Intro-SQL.html#advanced-topics---which-order-do-these-go-in",
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---1",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics---1",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Advanced Topics - Which Order do these go in?",
-    "text": "Advanced Topics - Which Order do these go in?\nThe list below contains all the possible keywords. We will get to all of them in this workshop.\n  WITH cte_name AS ()\n  SELECT DISTINCT\n         column\n         ,AGG_FUNC(column_or_expression), …\n    FROM mytable\n         JOIN another_table\n           ON mytable.column = another_table.column\n   WHERE constraint_expression\nGROUP BY column\n  HAVING constraint_expression\nORDER BY column ASC/DESC\n   LIMIT count;"
+    "section": "Advanced Topics -",
+    "text": "Advanced Topics -\nWhich Order do these go in?\nThe list below contains all the possible keywords. We will get to all of them in this workshop.\n  WITH cte_name AS ()\n  SELECT DISTINCT\n         column\n         ,AGG_FUNC(column_or_expression), …\n    FROM mytable\n         JOIN another_table\n           ON mytable.column = another_table.column\n   WHERE constraint_expression\nGROUP BY column\n  HAVING constraint_expression\nORDER BY column ASC/DESC\n   LIMIT count;"
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---limit-the-number-of-results",
-    "href": "WERA-2024-Intro-SQL.html#advanced-topics---limit-the-number-of-results",
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---2",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics---2",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Advanced Topics - Limit the number of results",
-    "text": "Advanced Topics - Limit the number of results\n\n\nThis is one of those areas where SQL languages will differ.\nMost languages will say “Put the LIMIT keyword after everything else and put the number of rows you want.\nMicrosoft SQL Products will have you put the TOP keyword after the SELECT Statement.\n\n-- Most ways\nSELECT DISTINCT *\n  FROM \"wera-db\".main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'\n LIMIT 10\n\n-- Microsoft way\nSELECT DISTINCT TOP 10 *\n  FROM [wera-db].main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'"
+    "section": "Advanced Topics -",
+    "text": "Advanced Topics -\nLimit the number of results\n\n\nThis is one of those areas where SQL languages will differ.\nMost languages will say “Put the LIMIT keyword after everything else and put the number of rows you want.\nMicrosoft SQL Products will have you put the TOP keyword after the SELECT Statement.\n\n-- Most ways\nSELECT DISTINCT *\n  FROM \"wera-db\".main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'\n LIMIT 10\n\n-- Microsoft way\nSELECT DISTINCT TOP 10 *\n  FROM [wera-db].main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'"
   },
   {
     "objectID": "index.html",
@@ -418,26 +418,5 @@
     "title": "Projects",
     "section": "Project 3",
     "text": "Project 3"
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics--",
-    "href": "WERA-2024-Intro-SQL.html#advanced-topics--",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Advanced topics -",
-    "text": "Advanced topics -\nHaving\n\nSimilar to WHERE statements, but they are used if you are filtering based off an aggregate function.\nComes after the GROUP BY clause and before the ORDER BY clause.\nIf you need to filter on a row-level criteria, use the WHERE clause.\n\nSELECT COUNT(*) as DistrictCount\n  FROM \"wera-db\".main.enrollment\n WHERE student_count BETWEEN 900 AND 1100\n   AND OrganizationLevel = 'District'\n   AND student_group = 'All Students'\n   AND GradeLevel = 'All Grades'\nHAVING COUNT(*) &gt; 1;"
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---1",
-    "href": "WERA-2024-Intro-SQL.html#advanced-topics---1",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Advanced Topics -",
-    "text": "Advanced Topics -\nWhich Order do these go in?\nThe list below contains all the possible keywords. We will get to all of them in this workshop.\n  WITH cte_name AS ()\n  SELECT DISTINCT\n         column\n         ,AGG_FUNC(column_or_expression), …\n    FROM mytable\n         JOIN another_table\n           ON mytable.column = another_table.column\n   WHERE constraint_expression\nGROUP BY column\n  HAVING constraint_expression\nORDER BY column ASC/DESC\n   LIMIT count;"
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---2",
-    "href": "WERA-2024-Intro-SQL.html#advanced-topics---2",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Advanced Topics -",
-    "text": "Advanced Topics -\nLimit the number of results\n\n\nThis is one of those areas where SQL languages will differ.\nMost languages will say “Put the LIMIT keyword after everything else and put the number of rows you want.\nMicrosoft SQL Products will have you put the TOP keyword after the SELECT Statement.\n\n-- Most ways\nSELECT DISTINCT *\n  FROM \"wera-db\".main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'\n LIMIT 10\n\n-- Microsoft way\nSELECT DISTINCT TOP 10 *\n  FROM [wera-db].main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'"
   }
 ]
