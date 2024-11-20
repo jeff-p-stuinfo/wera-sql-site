@@ -1,5 +1,6 @@
 ---
-title: "WERA 2024 SQL Workshop Slides"
+title: "How to Start with SQL for Education"
+subtitle: "Cameron Marsden and Jeff Pannell"
 format:
   revealjs: 
     slide-number: true
@@ -16,8 +17,7 @@ library(countdown, quietly = F)
 
 ## As you come in
 
--   Make sure you have access to the presentation. <https://github.com/jeff-p-stuinfo/wera_sql_24>
--   Connect to the database <a href="#/12">(click here for instructions)</a>
+-   Please make sure you have access to the presentation and that you can connect to the database <https://jeff-p-stuinfo.github.io/wera-sql-site>
 
 ## Introductions {.smaller .scrollable}
 
@@ -38,11 +38,11 @@ Introduce yourself!
 ## Agenda and Structure {.smaller .scrolling}
 
 ::: smaller
--   Overview of what SQL is. (Lecture)
+-   Overview of what SQL is
     -   SQL Flavors
     -   Objects
     -   Queries
--   Hands on exercises on how to do SQL coding.
+-   Hands on exercises on how to do SQL coding
     -   Basic Queries
     -   Use Cases
 -   There will be breaks!
@@ -68,7 +68,7 @@ If you want to learn more:
 
 ## What is SQL? {.smaller}
 
--   SQL is a Structured Query Language.
+-   SQL = Structured Query Language
 -   You don't need to know where the data is stored on the hard drive, you just need to know which table it's in and how to describe it.
 -   It comes in many flavors
     -   DuckDB
@@ -85,26 +85,26 @@ If you want to learn more:
 
 ## SQL Use Cases
 
--   As a centralized data storage solution
+-   Centralized data storage solution
 
--   As a data source for reports.
+-   Data source for reports
 
--   Compute calculations on data and store for easy and convenient access.
+-   Compute calculations on data and store for easy and convenient access
 
--   Find statistics on your data without external tools.
+-   Find statistics on your data without external tools
 
--   Conduct data exploration to better understand your data.
+-   Conduct data exploration to better understand your data
 
--   Other Advanced uses (Partitions, Conditional Statements, Running Tetris ... seriously you can. But don't)
+-   Other Advanced uses (Partitions, Conditional Statements, Running Tetris ... [seriously you can](https://github.com/nuno-faria/tetris-sql). But don't)
 
 ## Permissions
 
--   Permissions are how you are going to want to communicate with your IT.
+-   Permissions are how you are going to want to communicate with your IT department.
 -   You will need permissions (at minimum) for the server and database you want to access.
 -   You can ask for read only permissions. This will mean you can only see the data, but not change it.
 -   If you don't know what you need to ask for, try setting up a meeting to describe the outcomes you're looking for and then determine what access you'd need to achieve this.
 
-## SQL Objects {.scrollable .smaller}
+## SQL Objects {.smaller}
 
 -   Server
     -   Contains at least one database and allows for data sequestering.
@@ -128,63 +128,41 @@ If you want to learn more:
 ## Exercise 1 : Setting up our SQL Environment
 
 -   We will be using the DBeaver IDE
-    -   If you can't there is another option.
 -   Our SQL server is built and will be run using DuckDB
 -   Set up DBeaver and connect it to the DuckDB file
 
 ## Steps {.scrollable .smaller}
 
 ```{r}
-countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
+countdown(minutes = 10, seconds = 0, top = 0, bottom = NULL)
 ```
 
-[If you can't download or use DBeaver, go to the next slide for a different option.]{style="text-decoration: underline;"}
+1.  Download DBeaver Community from: <https://dbeaver.io/download/>
 
-1.  Go to DBeaver Community Download: <https://dbeaver.io/download/>
+2.  Open it on your computer.
 
-2.  Download it.
+3.  Only install it for your account OR just unzip it. 
 
-3.  Open it on your computer.
+4.  Download the [wera-db.duckdb database file](jeff-p-stuinfo.github.io/wera-sql-site/assets/data/wera-db.duckdb)
 
-4.  Only install it for your account OR just unzip it. 
+5.  Open DBeaver.
 
-    4a. You will need to download the JDBC driver.Please do so.
+6.  In the upper left corner, click on the blue plug with the green plus side.\
+    ![](assets/images/dbeaver_step8.png)
 
-5.  Now connect to the data by going to <https://github.com/jeff-p-stuinfo/wera_sql_24>
+7.  In the popup that appears, type in "duck", and click on the only option. Then click "next"\
+    ![](assets/images/dbeaver_search_step9.png){width="364"}
 
-6.  Click on the file labeled "wera-db.duckdb" and download it.
+8.  Click on "Open" and navigate to where you downloaded "wera-db.duckdb" and select that file. Then click Finish
 
-7.  Open DBeaver.
-
-8.  In the upper left corner, click on the blue plug with the green plus side. ![](assets/images/dbeaver_step8.png)
-
-9.  In the popup that appears, type in "duck", and click on the only option. Then click "next"\
-    ![](assets/images/dbeaver_search_step9.png)
-
-10. Click on "Open" and navigate to where you downloaded "wera-db.duckdb" and select that file. Then click Finish.
-
-## Steps For Shell {.smaller .scrollable}
-
-1.  Follow steps 1 through 6 on the DBeaver instructions.
-2.  Go to your web browser of choice (e.g., Chrome, Firefox, Edge)
-3.  Go to <https://shell.duckdb.org/>.
-4.  Enter the following one at a time.
-
-``` sql
-.files add wera-db.duckdb;
-ATTACH 'wera-db.duckdb';
-USE 'wera-db';
-```
+9.  You may need to download the JDBC driver. If prompted, please do so.
 
 ## SELECT Statements {.smaller}
 
 -   SELECT Statements tell the query which column you want in your output.
 -   You can either select some columns by naming them or all of them by using the '\*' character.
 -   You can specify DISTINCT to give unique results from your query
-
-Note[^1]
-
-[^1]: Note that you can write `SELECT` or `select` or even `sElEcT` (please don't). The convention is to use all capital letters for key words.
+-   Note that you can write `SELECT` or `select` or even `sElEcT` (please don't). The convention is to use all capital letters for key words.
 
 ``` sql
 -- by the way, you can leave notes for yourself in the code by 
@@ -337,7 +315,7 @@ SELECT *
 
 -   You can filter on whether something is **NULL**.
     -   A **NULL** value says that there is no data present.
--   Filter by saying WHERE column IS NULL
+-   Filter by saying WHERE column **IS NULL**
 
 ``` sql
 SELECT DistrictName
@@ -361,10 +339,9 @@ Remember that WHERE clauses FILTER data.
 
 ## ORDER BY {.scrollable .smaller}
 
--   Comes after where clause.
--   Sorts the data.
--   Can be either **ASC**ending or **DESC**ending.
--   Example
+-   Comes after where clause
+-   Sorts the data
+-   Can be either **ASC**ending or **DESC**ending
 
 ``` sql
 -- Most ways
@@ -453,24 +430,34 @@ LIMIT 5;
 
 ## Inline Functions {.smaller}
 
--   In line functions can be used in the SELECT statement
+-   Inline functions can be used in SELECT statements
 -   Aggregation functions allow you to do one action to many rows at the same time.
--   These are some of the common ones
+-   Some of the common aggregation functions are:
     -   SUM (adds together numbers of a numeric column over a set of grouped rows)
     -   COUNT (counts the number of non-blank cells in a column over a set of grouped rows)
     -   MIN (finds the smallest number of a numeric column over a set of grouped rows)
     -   MAX (finds the largest number of a numeric column over a set of grouped rows)
     -   AVG (finds the average of a numeric column over a set of grouped rows)
     -   LEFT/RIGHT (extracts the left or right characters from text)
--   Using one of these functions will require you to use an alias to rename the column.
+-   We recommend you use an alias to rename the column if you use one of these functions.
 
 ## COUNT
 
--   You can Count a specific column. This will count all non-NULL values in that column.
--   You can Count *everything* with COUNT(\*)
+-   You can count values in a specific column. This will count all non-NULL values in that column.
 
 ``` sql
-SELECT COUNT(*) as record_count --This will get all of the records in the table
+SELECT 
+COUNT(SchoolName) as school_count 
+--This will count all non-null values from SchoolName in the table
+FROM main.enrollment
+```
+
+-   You can Count the number of *all the rows* with COUNT(\*)
+
+``` sql
+SELECT 
+COUNT(*) as record_count 
+--This will count all of the records in the table
 FROM main.enrollment
 ```
 
@@ -588,6 +575,12 @@ ORDER BY Student_Count DESC;
 countdown(minutes = 10, seconds = 0, top = 50, bottom = 0, right = 0)
 ```
 
+## Back from Break
+
+### Review any Parking Lot Questions
+
+![](assets/images/parking_lot.png){fig-alt="A birds eye view of a mostly empty parking lot"}
+
 ## JOINs {.smaller .scrollable}
 
 -   JOINs allow you to output data from multiple tables at the same time.
@@ -599,7 +592,7 @@ LEFT JOIN                                   �
 
 ## Join Sytax
 
--   Comes between FROM Clause and WHERE clause.
+-   Comes between FROM Clause and WHERE clause
 -   Think of it as a way to expand what you're querying from.
 -   You need at least one column from each table to match **ON**.
 
@@ -777,7 +770,17 @@ If you want to learn more:
 
 -   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](assets/images/W3Schools_Example_Search.png)
 
-## Ending
+## Follow-up Thoughts
+
+-   What data questions are do you encounter in your job?
+-   How do you think you can answer these questions, or questions like these using SQL now?
+-   For example, what types of functions would you use to:
+    -   Count how many students are regular attenders
+    -   Calculate discipline rates
+    -   Calculate graduation rates
+    -   Any others?
+
+## Thank you for attending!
 
 Here is the link to a form where you can tell us what we did well and how we can improve.
 

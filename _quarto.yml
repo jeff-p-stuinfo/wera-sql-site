@@ -7,8 +7,9 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Workshop Home
-      - WERA-2024-Intro-SQL.qmd
+        text: Setup Instructions
+      - href: WERA-2024-Intro-SQL.qmd
+        text: Slide Deck
 
     tools:
       - icon: github
