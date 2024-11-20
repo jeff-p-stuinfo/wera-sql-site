@@ -16,8 +16,16 @@ library(countdown, quietly = F)
 
 ## As you come in
 
+<<<<<<< HEAD
 
 -   Make sure you have access to the presentation. <https://github.com/jeff-p-stuinfo/wera_sql_24>
+=======
+<<<<<<< HEAD
+-   Make sure you have access to the presentation. <https://github.com/jeff-p-stuinfo/wera_sql_24>
+=======
+-   Make sure you have access to the presentation. [https://github.com/jeff-p-stuinfo/wera_sql_24](https://github.com/jeff-p-stuinfo/wera_sql_24)
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 -   Connect to the database <a href="#/12">(click here for instructions)</a>
 
 ## Introductions {.smaller .scrollable}
@@ -35,7 +43,16 @@ Introduce yourself!
 -   How do you work with data?
     -   What kind of data do you work with?
 
+<<<<<<< HEAD
 ## Agenda and Structure {.smaller .scrolling}
+=======
+<<<<<<< HEAD
+## Agenda and Structure {.smaller .scrolling}
+=======
+
+## Agenda and Structure
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 
 ::: smaller
 -   Overview of what SQL is. (Lecture)
@@ -47,7 +64,15 @@ Introduce yourself!
     -   Use Cases
 -   There will be breaks!
 -   Parking Lot
+<<<<<<< HEAD
     -   If you have questions, write it on a sticky note, and then put it on the big paper on the side of the room
+=======
+<<<<<<< HEAD
+    -   If you have questions, write it on a sticky note, and then put it on the big paper on the side of the room
+=======
+    - If you have questions, write it on a sticky note, and then put it on the big paper on the side of the room
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 :::
 
 ## Target Audience
@@ -64,7 +89,15 @@ If you want to learn more:
 
 -   Geeks For Geeks (https://www.geeksforgeeks.org)
 
+<<<<<<< HEAD
 -   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](assets/images/W3Schools_Example_Search.png)
+=======
+<<<<<<< HEAD
+-   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](assets/images/W3Schools_Example_Search.png)
+=======
+-   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](W3Schools_Example_Search.png)
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 
 ## What is SQL? {.smaller}
 
@@ -140,6 +173,10 @@ countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
 
 [If you can't download or use DBeaver, go to the next slide for a different option.]{style="text-decoration: underline;"}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 1.  Go to DBeaver Community Download: <https://dbeaver.io/download/>
 
 2.  Download it.
@@ -170,6 +207,11 @@ countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
 3.  Go to <https://shell.duckdb.org/>.
 4.  Enter the following one at a time.
 
+<<<<<<< HEAD
+=======
+``` sql
+=======
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 1.    Go to DBeaver Community Download: <https://dbeaver.io/download/>
 2.    Download it.
 3.    Open it on your computer.
@@ -191,6 +233,7 @@ countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
 3.    Go to <https://shell.duckdb.org/>.
 4.    Enter the following one at a time. 
 ```{.sql}
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
 .files add wera-db.duckdb;
 ATTACH 'wera-db.duckdb';
 USE 'wera-db';
@@ -250,6 +293,8 @@ Remember that you can get data from a table using a combination of a SELECT stat
 
 <<<<<<< HEAD
 ## Exercise 2 : Select and From (Part 1)
+<<<<<<< HEAD
+=======
 
 ```{r}
 countdown(minutes = 5, seconds = 0, bottom = 0)
@@ -287,6 +332,50 @@ countdown(minutes = 5, seconds = 0, bottom = 0)
 ::: footer
 This link seems DISTINCT from the other two [select syntax reference links](https://www.w3schools.com/SQL/sql_distinct.asp).
 :::
+=======
+## Exercise 2 : Select and From
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
+
+```{r}
+countdown(minutes = 5, seconds = 0, bottom = 0)
+```
+
+1.  Select all the rows and columns from the enrollment table.
+
+<<<<<<< HEAD
+::: footer
+It would be a real shame if somebody left a handy [select syntax reference link](https://www.w3schools.com/SQL/sql_select.asp) here.
+:::
+
+## Exercise 2 : Select and From (Part 2)
+
+```{r}
+countdown(minutes = 5, seconds = 0, bottom = 0)
+```
+
+1.  Select all the rows and columns from the enrollment table.
+2.  Which school years are included in the enrollment data set?
+
+::: footer
+Wait, this is the same [select syntax reference link](https://www.w3schools.com/SQL/sql_select.asp) as the last slide!
+:::
+
+## Exercise 2 : Select and From (Part 3)
+
+```{r}
+countdown(minutes = 5, seconds = 0, bottom = 0)
+```
+
+1.  Select all the rows and columns from the enrollment table.
+2.  Which school years are included in the enrollment data set?
+3.  SELECT all districts and schools from enrollment without duplicates
+
+::: footer
+This link seems DISTINCT from the other two [select syntax reference links](https://www.w3schools.com/SQL/sql_distinct.asp).
+:::
+=======
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 
 ## Exercise 2 : Answers
 
@@ -307,7 +396,15 @@ SELECT DISTINCT
 ```
 
 ::: footer
+<<<<<<< HEAD
 Don't worry too much about how your code looks. As long as it runs and you can read it later, it's fine. If you want very well organized code that can take some time and effort. Jeff recommends giving it to Cameron to write.
+=======
+<<<<<<< HEAD
+Don't worry too much about how your code looks. As long as it runs and you can read it later, it's fine. If you want very well organized code that can take some time and effort. Jeff recommends giving it to Cameron to write.
+=======
+Don't worry too much about how your code looks. As long as it runs and you can read it later, it's fine.
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 :::
 
 ## WHERE Statements {.smaller .scrollable}
@@ -354,11 +451,24 @@ SELECT *
 ```
 
 ## WHERE Statements Part 3
+<<<<<<< HEAD
+
 -   You can filter on whether something is **NULL**.
     -   A **NULL** value says that there is no data present.
 -   Filter by saying WHERE column IS NULL
 
 ``` sql
+=======
+-   You can filter on whether something is **NULL**.
+    -   A **NULL** value says that there is no data present.
+-   Filter by saying WHERE column IS NULL
+<<<<<<< HEAD
+
+``` sql
+=======
+```{.sql}
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 SELECT DistrictName
 FROM main.enrollment
 WHERE SchoolName IS NULL
@@ -588,6 +698,7 @@ Remember that if you want to AGGREGATE, you will need to GROUP BY the other colu
 
 <<<<<<< HEAD
 ## Exercise 4 (Part 1) {.smaller}
+<<<<<<< HEAD
 
 ```{r}
 countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
@@ -603,6 +714,31 @@ countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
 
 ```{r}
 countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+=======
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Find the count of all districts with enrollments between 900 and 1100.
+
+::: footer
+[BETWEEN](https://www.w3schools.com/SQL/sql_between.asp) this exercise and the next one, it's hard to know what reference to [COUNT](https://www.w3schools.com/SQL/sql_count.asp) on.
+:::
+
+## Exercise 4 (Part 2) {.smaller}
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+=======
+
+
+## Exercise 4 {.smaller}
+
+```{r}
+countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 ```
 
 1.  Find the count of all districts with enrollments between 900 and 1100.
@@ -626,6 +762,12 @@ countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
 ::: footer
 This is a tricky question, but there has to be [SUM](https://www.w3schools.com/SQl/sql_sum.asp) operator we can use
 :::
+<<<<<<< HEAD
+=======
+=======
+3.  Give the count of students by county as reported at the district level.
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 
 ## Exercise 4 : Answers
 
@@ -658,6 +800,21 @@ ORDER BY BigSchoolCount DESC;
 GROUP BY County 
 ORDER BY Student_Count DESC;
 ```
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+## BREAK
+
+![Image references may expire, unlike Kit Kat bars.](images/kitkat.png){fig-alt="A Kit Kat bar" width="500"}
+
+```{r}
+countdown(minutes = 10, seconds = 0, top = 50, bottom = 0, right = 0)
+```
+
+=======
+
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 ## BREAK
 
 ![Image references may expire, unlike Kit Kat bars.](assets/images/kitkat.png){fig-alt="A Kit Kat bar" width="500"}
@@ -666,6 +823,7 @@ ORDER BY Student_Count DESC;
 countdown(minutes = 10, seconds = 0, top = 50, bottom = 0, right = 0)
 ```
 
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
 ## JOINs {.smaller .scrollable}
 
 -   JOINs allow you to output data from multiple tables at the same time.
@@ -673,7 +831,15 @@ countdown(minutes = 10, seconds = 0, top = 50, bottom = 0, right = 0)
 
 LEFT JOIN                                                                         INNER JOIN
 
+<<<<<<< HEAD
 ![LEFT JOIN](assets/images/left_outer_join.png){width="45%"} ![INNER JOIN](assets/images/inner_join.png){width="45%"} <!-- The titles can places with absolute positioning -->
+=======
+<<<<<<< HEAD
+![LEFT JOIN](assets/images/left_outer_join.png){width="45%"} ![INNER JOIN](assets/images/inner_join.png){width="45%"} <!-- The titles can places with absolute positioning -->
+=======
+![LEFT JOIN](left_outer_join.png){width="45%"} ![INNER JOIN](inner_join.png){width="45%"} <!-- The titles can places with absolute positioning -->
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 
 ## Join Sytax
 
@@ -689,7 +855,13 @@ SELECT *
 ```
 
 ## LEFT vs INNER {.smaller .incremental}
+<<<<<<< HEAD
 
+-   Use a LEFT JOIN when you want one of your tables to be a "base".
+=======
+<<<<<<< HEAD
+
+-   ***THESE SHOULD BE INCREMENTAL, BUT IT'S NOT WORKING!***
 -   Use a LEFT JOIN when you want one of your tables to be a "base".
 -   That way, you can get all the information you know you want in your base table and then just add details.
 -   Use an INNER JOIN when you want only those rows that are common to both.
@@ -742,7 +914,69 @@ countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
 1.  Using your answer to 4.2 as a reference (you can use ours if you didn't finish), join in to the public directory, find the administrator.
 2.  Using your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.
 3.  Find schools that have enrollment but no graduation data. (Fun fact! You can't use = to find NULL values. There must be some other way to find out what IS NULL. Hmmm...)
+=======
+-  ***THESE SHOULD BE INCREMENTAL, BUT IT'S NOT WORKING!***
+-   Use a LEFT JOIN when you want one of your tables to be a "base". 
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
+-   That way, you can get all the information you know you want in your base table and then just add details.
+-   Use an INNER JOIN when you want only those rows that are common to both.
+-   For instance, if you did an INNER JOIN on enrollment and graduation, you would only have the data for schools with enrollment **AND** graduation data.
 
+## Exercise 5 (Part 1)
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+<<<<<<< HEAD
+1.  Using your answer to 4.2 as a reference (you can use ours if you didn't finish), join in to the public directory, find the administrator.
+
+``` sql
+-- Example Syntax from 4.2
+
+  SELECT DistrictName, COUNT(*) as BigSchoolCount
+    FROM "wera-db".main.enrollment
+   WHERE student_count > 1000 
+     AND OrganizationLevel = 'School' 
+     AND student_group = 'All Students' 
+     AND GradeLevel = 'All Grades'
+GROUP BY DistrictName 
+ORDER BY BigSchoolCount DESC;
+```
+
+::: footer
+Fun fact! People who learn SQL are never lonely at lunch because they know how to [JOIN](https://www.w3schools.com/SQl/sql_join_left.asp) tables.
+:::
+
+## Exercise 5 (Part 2)
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Using your answer to 4.2 as a reference (you can use ours if you didn't finish), join in to the public directory, find the administrator.
+2.  Using your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.
+
+::: footer
+Fun fact! People who learn SQL are never lonely at lunch because they know how to [JOIN](https://www.w3schools.com/SQl/sql_join_left.asp) tables.
+:::
+
+## Exercise 5 (Part 3)
+
+```{r}
+countdown(minutes = 5, seconds = 0, top = 0, bottom = NULL)
+```
+
+1.  Using your answer to 4.2 as a reference (you can use ours if you didn't finish), join in to the public directory, find the administrator.
+2.  Using your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.
+3.  Find schools that have enrollment but no graduation data. (Fun fact! You can't use = to find NULL values. There must be some other way to find out what IS NULL. Hmmm...)
+
+=======
+1.  Using your answer to 4.2 as a reference (or ours if you didn't finish), join in to the public directory, find the administrator.
+2.  Find the bottom five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.
+3.  Find schools that have enrollment but no graduation data. NEED TO MAKE THIS QUESTION DIFFERENT. 
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 
 ## Exercise 5: Answers
 
@@ -818,8 +1052,16 @@ SELECT SUM(grad_rate + continuing_rate) AS combined_rate
   FROM step1
 ```
 
+<<<<<<< HEAD
 
 ## Exercise 6
+=======
+<<<<<<< HEAD
+## Exercise 6
+=======
+## Example 6
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 
 ```{r}
 countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
@@ -827,10 +1069,19 @@ countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
 
 1.  Take the first query from Exercise 5, remove the order by clause, put it into a CTE, and then select everything from it.
 
+<<<<<<< HEAD
 ::: footer
 Some people really like the [CTE](https://www.geeksforgeeks.org/cte-in-sql/), but I prefer the mountains.
 :::
 
+=======
+<<<<<<< HEAD
+::: footer
+Some people really like the [CTE](https://www.geeksforgeeks.org/cte-in-sql/), but I prefer the mountains.
+:::
+=======
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 ## Example 6: Answers
 
 ``` sql
@@ -859,12 +1110,27 @@ If you want to learn more:
 
 -   Geeks For Geeks (https://www.geeksforgeeks.org)
 
+<<<<<<< HEAD
 -   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](assets/images/W3Schools_Example_Search.png)
+=======
+<<<<<<< HEAD
+-   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](assets/images/W3Schools_Example_Search.png)
+=======
+-   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](W3Schools_Example_Search.png)
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 
 ## Ending
 
 Here is the link to a form where you can tell us what we did well and how we can improve.
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+>>>>>>> 5554c8ae1cc5db803adb416ef506965de6219bab
 ## Advanced topics {.smaller .scrollable}
 
 #### HAVING
