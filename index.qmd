@@ -3,7 +3,7 @@ title: "Setting up your Database"
 about:
   id: setup
   template: broadside
-  image: assets/images/presentation-chalkboard.png
+  image: assets/images/checklist.png
 ---
 
 ::: {#setup .smaller}

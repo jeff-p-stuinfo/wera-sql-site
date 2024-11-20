@@ -8,9 +8,7 @@ website:
     left:
       - href: index.qmd
         text: Workshop Home
-      - projects.qmd
       - WERA-2024-Intro-SQL.qmd
-      - text: Workshop Slides
 
     tools:
       - icon: github
