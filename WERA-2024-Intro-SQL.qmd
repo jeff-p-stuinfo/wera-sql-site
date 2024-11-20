@@ -16,7 +16,9 @@ library(countdown, quietly = F)
 
 ## As you come in
 
--   Make sure you have access to the presentation. [https://github.com/jeff-p-stuinfo/wera_sql_24](https://github.com/jeff-p-stuinfo/wera_sql_24)
+
+-   Make sure you have access to the presentation. <https://github.com/jeff-p-stuinfo/wera_sql_24>
+-   Connect to the database <a href="#/12">(click here for instructions)</a>
 
 ## Introductions {.smaller .scrollable}
 
@@ -63,7 +65,6 @@ If you want to learn more:
 -   Geeks For Geeks (https://www.geeksforgeeks.org)
 
 -   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](assets/images/W3Schools_Example_Search.png)
-
 
 ## What is SQL? {.smaller}
 

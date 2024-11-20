@@ -4,7 +4,7 @@
     "href": "WERA-2024-Intro-SQL.html#as-you-come-in",
     "title": "WERA 2024 SQL Workshop",
     "section": "As you come in",
-    "text": "As you come in\n\nMake sure you have access to the presentation. https://github.com/jeff-p-stuinfo/wera_sql_24"
+    "text": "As you come in\n\nMake sure you have access to the presentation. https://github.com/jeff-p-stuinfo/wera_sql_24\nConnect to the database (click here for instructions)"
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#introductions",
@@ -81,14 +81,14 @@
     "href": "WERA-2024-Intro-SQL.html#steps",
     "title": "WERA 2024 SQL Workshop",
     "section": "Steps",
-    "text": "Steps\n\n\n\n−+\n15:00\n\n\n\nIf you can’t download or use DBeaver, go to the next slide for a different option.\n\nGo to DBeaver Community Download: https://dbeaver.io/download/\nDownload it.\nOpen it on your computer.\nOnly install it for your account OR just unzip it. \n4a. You will need to download the JDBC driver.Please do so.\nNow connect to the data by going to https://github.com/jeff-p-stuinfo/wera_sql_24\nClick on the file labeled “wera-db.duckdb” and download it.\nOpen DBeaver.\nIn the upper left corner, click on the blue plug with the green plus side. \nIn the popup that appears, type in “duck”, and click on the only option. Then click “next”\n\nClick on “Open” and navigate to where you downloaded “wera-db.duckdb” and select that file. Then click Finish."
+    "text": "Steps\n\n\n\n−+\n15:00\n\n\n\nIf you can’t download or use DBeaver, go to the next slide for a different option.\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD 1. Go to DBeaver Community Download: https://dbeaver.io/download/\n\nDownload it.\nOpen it on your computer.\nOnly install it for your account OR just unzip it. \n4a. You will need to download the JDBC driver.Please do so.\nNow connect to the data by going to https://github.com/jeff-p-stuinfo/wera_sql_24\nClick on the file labeled “wera-db.duckdb” and download it.\nOpen DBeaver.\nIn the upper left corner, click on the blue plug with the green plus side. \nIn the popup that appears, type in “duck”, and click on the only option. Then click “next”\n\nClick on “Open” and navigate to where you downloaded “wera-db.duckdb” and select that file. Then click Finish."
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#steps-for-shell",
     "href": "WERA-2024-Intro-SQL.html#steps-for-shell",
     "title": "WERA 2024 SQL Workshop",
     "section": "Steps For Shell",
-    "text": "Steps For Shell\n\nFollow steps 1 through 6 on the DBeaver instructions.\nGo to your web browser of choice (e.g., Chrome, Firefox, Edge)\nGo to https://shell.duckdb.org/.\nEnter the following one at a time.\nGo to DBeaver Community Download: https://dbeaver.io/download/\nDownload it.\nOpen it on your computer.\nOnly install it for your account OR just unzip it.  4a. You will need to download the JDBC driver.Please do so.\nNow connect to the data by going to https://github.com/jeff-p-stuinfo/wera_sql_24\nClick on the file labeled “wera-db.duckdb” and download it.\nOpen DBeaver.\nIn the upper left corner, click on the blue plug with the green plus side. \nIn the popup that appears, type in “duck”, and click on the only option. Then click “next”\n\nClick on “Open” and navigate to where you downloaded “wera-db.duckdb” and select that file. Then click Finish."
+    "text": "Steps For Shell\n\nFollow steps 1 through 6 on the DBeaver instructions.\nGo to your web browser of choice (e.g., Chrome, Firefox, Edge)\nGo to https://shell.duckdb.org/.\nEnter the following one at a time.\n\n.files add wera-db.duckdb;\nATTACH 'wera-db.duckdb';\nUSE 'wera-db';"
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#select-statements",
@@ -109,14 +109,28 @@
     "href": "WERA-2024-Intro-SQL.html#if-you-remember-nothing-else-from-this-section",
     "title": "WERA 2024 SQL Workshop",
     "section": "If you remember nothing else from this section",
-    "text": "If you remember nothing else from this section\n\n\n\n\n\n\nImportant\n\n\nRemember that you can get data from a table using a combination of a SELECT statement and a FROM clause.\n\n\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Exercise 2 : Select and From (Part 1)\n\n\n\n−+\n05:00\n\n\n\n\nSelect all the rows and columns from the enrollment table.\n\n\nIt would be a real shame if somebody left a handy select syntax reference link here."
+    "text": "If you remember nothing else from this section\n\n\n\n\n\n\nImportant\n\n\nRemember that you can get data from a table using a combination of a SELECT statement and a FROM clause."
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from",
-    "href": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from",
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-1",
+    "href": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-1",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 2 : Select and From",
-    "text": "Exercise 2 : Select and From\n\n\n\n−+\n15:00\n\n\n\n\nSelect all the rows and columns from the enrollment table.\nWhich school years are included in the enrollment data set?\nSELECT all districts and schools from enrollment without duplicates"
+    "section": "Exercise 2 : Select and From (Part 1)",
+    "text": "Exercise 2 : Select and From (Part 1)\n\n\n\n−+\n05:00\n\n\n\n\nSelect all the rows and columns from the enrollment table.\n\n\nIt would be a real shame if somebody left a handy select syntax reference link here."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-2",
+    "href": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-2",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 2 : Select and From (Part 2)",
+    "text": "Exercise 2 : Select and From (Part 2)\n\n\n\n−+\n05:00\n\n\n\n\nSelect all the rows and columns from the enrollment table.\nWhich school years are included in the enrollment data set?\n\n\nWait, this is the same select syntax reference link as the last slide!"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-3",
+    "href": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-3",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 2 : Select and From (Part 3)",
+    "text": "Exercise 2 : Select and From (Part 3)\n\n\n\n−+\n05:00\n\n\n\n\nSelect all the rows and columns from the enrollment table.\nWhich school years are included in the enrollment data set?\nSELECT all districts and schools from enrollment without duplicates\n\n\nThis link seems DISTINCT from the other two select syntax reference links."
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#exercise-2-answers",
@@ -144,7 +158,7 @@
     "href": "WERA-2024-Intro-SQL.html#where-statements-part-3",
     "title": "WERA 2024 SQL Workshop",
     "section": "WHERE Statements Part 3",
-    "text": "WHERE Statements Part 3\n\nYou can filter on whether something is NULL.\n\nA NULL value says that there is no data present.\n\nFilter by saying WHERE column IS NULL\n\nSELECT DistrictName\nFROM main.enrollment\nWHERE SchoolName IS NULL\n\nYou can also filter something IS NOT NULL &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n\n=======\n```{.sql}\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d\nSELECT DistrictName\nFROM main.enrollment\nWHERE SchoolName IS NOT NULL"
+    "text": "WHERE Statements Part 3\n\nYou can filter on whether something is NULL.\n\nA NULL value says that there is no data present.\n\nFilter by saying WHERE column IS NULL\n\nSELECT DistrictName\nFROM main.enrollment\nWHERE SchoolName IS NULL\n\nYou can also filter something IS NOT NULL &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n\nSELECT DistrictName\nFROM main.enrollment\nWHERE SchoolName IS NOT NULL"
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#if-you-remember-nothing-else-from-this-section-1",
@@ -158,21 +172,35 @@
     "href": "WERA-2024-Intro-SQL.html#order-by",
     "title": "WERA 2024 SQL Workshop",
     "section": "ORDER BY",
-    "text": "ORDER BY\n\nComes after where clause.\nSorts the data.\nCan be either ASCending or DESCending.\nExample\n\n-- Most ways\n  SELECT DISTINCT *\n    FROM \"wera-db\".main.enrollment AS e\n   WHERE e.SchoolName LIKE '%Jefferson%'\nORDER BY DistrictName DESC\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD ## Exercise 3 : WHERE things get interesting! (Part 1)\n\n\n\n−+\n05:00\n\n\n\n\nFind all the schools in the Seattle School District.\n\n\nThis is WHERE somebody left a handy reference link to WHERE clauses again."
+    "text": "ORDER BY\n\nComes after where clause.\nSorts the data.\nCan be either ASCending or DESCending.\nExample\n\n-- Most ways\n  SELECT DISTINCT *\n    FROM \"wera-db\".main.enrollment AS e\n   WHERE e.SchoolName LIKE '%Jefferson%'\nORDER BY DistrictName DESC"
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting",
-    "href": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting",
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-1",
+    "href": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-1",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 3 : WHERE things get interesting!",
-    "text": "Exercise 3 : WHERE things get interesting!\n\n\n\n−+\n20:00\n\n\n\n\nFind all the schools in the Seattle School District.\nFind all schools in the Seattle School District that have the name “John” in their name.\nFrom that list of schools, make the largest student count be on top. (There should only be four rows.)"
+    "section": "Exercise 3 : WHERE things get interesting! (Part 1)",
+    "text": "Exercise 3 : WHERE things get interesting! (Part 1)\n\n\n\n−+\n05:00\n\n\n\n\nFind all the schools in the Seattle School District.\n\n\nThis is WHERE somebody left a handy reference link to WHERE clauses again."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-2",
+    "href": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-2",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 3 : WHERE things get interesting! (Part 2)",
+    "text": "Exercise 3 : WHERE things get interesting! (Part 2)\n\n\n\n−+\n05:00\n\n\n\n\nFind all the schools in the Seattle School District.\nFind all schools in the Seattle School District that have “Elementary” in their name.\n\n\nWHERE could a person find a helpful reference for questions LIKE we have above?"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-3",
+    "href": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-3",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 3 : WHERE things get interesting! (Part 3)",
+    "text": "Exercise 3 : WHERE things get interesting! (Part 3)\n\n\n\n−+\n05:00\n\n\n\n\nFind all the schools in the Seattle School District.\nFind all schools in the Seattle School District that have “Elementary” in their name.\nFrom that list of schools, make the largest student count be on top. (Extra credit! LIMIT the results to 5)\n\n\nAll these references are completely out of ORDER?"
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#exercise-3-answers",
     "href": "WERA-2024-Intro-SQL.html#exercise-3-answers",
     "title": "WERA 2024 SQL Workshop",
     "section": "Exercise 3 : Answers",
-    "text": "Exercise 3 : Answers\n-- Question 1\nSELECT DISTINCT \n       DistrictName \n       ,SchoolName \n  FROM \"wera-db\".main.enrollment\n WHERE DistrictName = 'Seattle School District No. 1';\n \n-- Question 2\nSELECT DISTINCT \n       DistrictName \n       ,SchoolName \n  FROM \"wera-db\".main.enrollment\n WHERE DistrictName = 'Seattle School District No. 1'\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n   AND SchoolName LIKE '%Elementary%';\n=======\n   AND SchoolName LIKE '%John%';\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d\n\n-- Question 3\nSELECT DiSTINCT \n       DistrictName,  \n       SchoolName, \n       student_count\n  FROM \"wera-db\".main.enrollment\n WHERE DistrictName = 'Seattle School District No. 1'\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n   AND SchoolName LIKE '%Elementary%'\n   AND student_group = 'All Students'\n   AND GradeLevel  = 'All Grades'\n ORDER BY student_count DESC;\n \n-- Extra Credit! Use this as the final line on Question 3\nLIMIT 5;\n======= AND SchoolName LIKE ‘%John%’ AND student_group = ‘All Students’ AND GradeLevel = ‘All Grades’ ORDER BY student_count DESC;\n\n\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d\n## Inline Functions {.smaller}\n\n-   In line functions can be used in the SELECT statement\n-   Aggregation functions allow you to do one action to many rows at the same time.\n-   These are some of the common ones\n    -   SUM (adds together numbers of a numeric column over a set of grouped rows)\n    -   COUNT (counts the number of non-blank cells in a column over a set of grouped rows)\n    -   MIN (finds the smallest number of a numeric column over a set of grouped rows)\n    -   MAX (finds the largest number of a numeric column over a set of grouped rows)\n    -   AVG (finds the average of a numeric column over a set of grouped rows)\n    -   LEFT/RIGHT (extracts the left or right characters from text)\n-   Using one of these functions will require you to use an alias to rename the column.\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n## COUNT\n\n-   You can Count a specific column. This will count all non-NULL values in that column.\n-   You can Count *everything* with COUNT(\\*)\n\n``` sql\n=======\n## COUNT \n-   You can Count a specific column. This will count all non-NULL values in that column.\n-   You can Count *everything* with COUNT(*)\n\n```{.sql}\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d\nSELECT COUNT(*) as record_count --This will get all of the records in the table\nFROM main.enrollment"
+    "text": "Exercise 3 : Answers\n-- Question 1\nSELECT DISTINCT \n       DistrictName \n       ,SchoolName \n  FROM \"wera-db\".main.enrollment\n WHERE DistrictName = 'Seattle School District No. 1';\n \n-- Question 2\nSELECT DISTINCT \n       DistrictName \n       ,SchoolName \n  FROM \"wera-db\".main.enrollment\n WHERE DistrictName = 'Seattle School District No. 1'\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n   AND SchoolName LIKE '%Elementary%';\n=======\n   AND SchoolName LIKE '%John%';\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d\n\n-- Question 3\nSELECT DiSTINCT \n       DistrictName,  \n       SchoolName, \n       student_count\n  FROM \"wera-db\".main.enrollment\n WHERE DistrictName = 'Seattle School District No. 1'\n   AND SchoolName LIKE '%Elementary%'\n   AND student_group = 'All Students'\n   AND GradeLevel  = 'All Grades'\n ORDER BY student_count DESC;\n \n-- Extra Credit! Use this as the final line on Question 3\nLIMIT 5;"
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#inline-functions",
@@ -193,7 +221,7 @@
     "href": "WERA-2024-Intro-SQL.html#group-by",
     "title": "WERA 2024 SQL Workshop",
     "section": "GROUP BY",
-    "text": "GROUP BY\n\nAllows for aggregation &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nYou will need each column that is not aggregated to be in the group by statement.\n\n=======\n-   You will need each column that is not aggregated to be in the group by statement. \n\n```{.sql}\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d\n  SELECT SchoolYear,\n         DistrictName,\n         SchoolName\n    FROM main.enrollment\nGROUP BY SchoolYear,\n         DistrictName,\n         SchoolName"
+    "text": "GROUP BY\n\nAllows for aggregation &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\nYou will need each column that is not aggregated to be in the group by statement.\n\n  SELECT SchoolYear,\n         DistrictName,\n         SchoolName\n    FROM main.enrollment\nGROUP BY SchoolYear,\n         DistrictName,\n         SchoolName"
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#aggregate-functions-examples",
@@ -210,11 +238,25 @@
     "text": "If you remember nothing else from this section\n\n\n\n\n\n\nImportant\n\n\nRemember that if you want to AGGREGATE, you will need to GROUP BY the other columns."
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-4",
-    "href": "WERA-2024-Intro-SQL.html#exercise-4",
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-4-part-1",
+    "href": "WERA-2024-Intro-SQL.html#exercise-4-part-1",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 4",
-    "text": "Exercise 4\n\n\n\n−+\n15:00\n\n\n\n\nFind the count of all districts with enrollments between 900 and 1100.\nGive the districts with counts of schools that have populations greater than 1000.\nGive the count of students by county as reported at the district level."
+    "section": "Exercise 4 (Part 1)",
+    "text": "Exercise 4 (Part 1)\n\n\n\n−+\n05:00\n\n\n\n\nFind the count of all districts with enrollments between 900 and 1100.\n\n\nBETWEEN this exercise and the next one, it’s hard to know what reference to COUNT on."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-4-part-2",
+    "href": "WERA-2024-Intro-SQL.html#exercise-4-part-2",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 4 (Part 2)",
+    "text": "Exercise 4 (Part 2)\n\n\n\n−+\n05:00\n\n\n\n\nFind the count of all districts with enrollments between 900 and 1100.\nGive the districts with counts of schools that have populations greater than 1000.\n\n\nWe can COUNT on this reference being GREATER THAN the last one."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-4-part-3",
+    "href": "WERA-2024-Intro-SQL.html#exercise-4-part-3",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 4 (Part 3)",
+    "text": "Exercise 4 (Part 3)\n\n\n\n−+\n05:00\n\n\n\n\nFind the count of all districts with enrollments between 900 and 1100.\nGive the districts with counts of schools that have populations greater than 1000.\nGive the number of students by county as reported at the district level.\n\n\nThis is a tricky question, but there has to be SUM operator we can use"
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#exercise-4-answers",
@@ -252,11 +294,25 @@
     "text": "LEFT vs INNER\n\nUse a LEFT JOIN when you want one of your tables to be a “base”.\nThat way, you can get all the information you know you want in your base table and then just add details.\nUse an INNER JOIN when you want only those rows that are common to both.\nFor instance, if you did an INNER JOIN on enrollment and graduation, you would only have the data for schools with enrollment AND graduation data."
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-5",
-    "href": "WERA-2024-Intro-SQL.html#exercise-5",
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-5-part-1",
+    "href": "WERA-2024-Intro-SQL.html#exercise-5-part-1",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 5",
-    "text": "Exercise 5\n\n\n\n−+\n15:00\n\n\n\n\nUsing your answer to 4.2 as a reference (or ours if you didn’t finish), join in to the public directory, find the administrator.\nFind the bottom five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.\nFind schools that have enrollment but no graduation data. NEED TO MAKE THIS QUESTION DIFFERENT. &gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d"
+    "section": "Exercise 5 (Part 1)",
+    "text": "Exercise 5 (Part 1)\n\n\n\n−+\n05:00\n\n\n\n\nUsing your answer to 4.2 as a reference (you can use ours if you didn’t finish), join in to the public directory, find the administrator.\n\n-- Example Syntax from 4.2\n\n  SELECT DistrictName, COUNT(*) as BigSchoolCount\n    FROM \"wera-db\".main.enrollment\n   WHERE student_count &gt; 1000 \n     AND OrganizationLevel = 'School' \n     AND student_group = 'All Students' \n     AND GradeLevel = 'All Grades'\nGROUP BY DistrictName \nORDER BY BigSchoolCount DESC;\n\nFun fact! People who learn SQL are never lonely at lunch because they know how to JOIN tables."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-5-part-2",
+    "href": "WERA-2024-Intro-SQL.html#exercise-5-part-2",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 5 (Part 2)",
+    "text": "Exercise 5 (Part 2)\n\n\n\n−+\n05:00\n\n\n\n\nUsing your answer to 4.2 as a reference (you can use ours if you didn’t finish), join in to the public directory, find the administrator.\nUsing your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.\n\n\nFun fact! People who learn SQL are never lonely at lunch because they know how to JOIN tables."
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-5-part-3",
+    "href": "WERA-2024-Intro-SQL.html#exercise-5-part-3",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Exercise 5 (Part 3)",
+    "text": "Exercise 5 (Part 3)\n\n\n\n−+\n05:00\n\n\n\n\nUsing your answer to 4.2 as a reference (you can use ours if you didn’t finish), join in to the public directory, find the administrator.\nUsing your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.\nFind schools that have enrollment but no graduation data. (Fun fact! You can’t use = to find NULL values. There must be some other way to find out what IS NULL. Hmmm…)"
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#exercise-5-answers",
@@ -273,11 +329,11 @@
     "text": "Common Table Expressions (CTEs) (WITH Keyword)\n\nThis allows for doing queries off to the side, which is helpful when you want to do multiple things at once.\nGoes before the SELECT statement.\nExample (you can’t call an aggregate function inside of an aggregate function)\n\nWITH step1 AS (\nSELECT SchoolYear, \n       SUM(graduate)/SUM(finalcohort) AS grad_rate,\n       SUM(continuing)/SUM(finalcohort) AS continuing_rate\n  FROM \"wera-db\".main.graduation\n  WHERE studentgrouptype = 'All'\n    AND cohort = 'Four Year'\n    AND organizationlevel = 'State'\nGROUP BY SchoolYear)\nSELECT SUM(grad_rate + continuing_rate) AS combined_rate\n  FROM step1"
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#example-6",
-    "href": "WERA-2024-Intro-SQL.html#example-6",
+    "objectID": "WERA-2024-Intro-SQL.html#exercise-6",
+    "href": "WERA-2024-Intro-SQL.html#exercise-6",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Example 6",
-    "text": "Example 6\n\n\n\n−+\n15:00\n\n\n\n\nTake the first query from Exercise 5, remove the order by clause, put it into a CTE, and then select everything from it."
+    "section": "Exercise 6",
+    "text": "Exercise 6\n\n\n\n−+\n15:00\n\n\n\n\nTake the first query from Exercise 5, remove the order by clause, put it into a CTE, and then select everything from it.\n\n\nSome people really like the CTE, but I prefer the mountains."
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#example-6-answers",
@@ -301,11 +357,25 @@
     "text": "Ending\nHere is the link to a form where you can tell us what we did well and how we can improve."
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics",
-    "href": "WERA-2024-Intro-SQL.html#advanced-topics",
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---having",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics---having",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Advanced topics",
-    "text": "Advanced topics\nHAVING\n\nSimilar to WHERE statements, but they are used if you are filtering based off an aggregate function.\nComes after the GROUP BY clause and before the ORDER BY clause.\nIf you need to filter on a row-level criteria, use the WHERE clause.\nExample\n\n\nSELECT COUNT(*) as DistrictCount\n  FROM \"wera-db\".main.enrollment\n WHERE student_count BETWEEN 900 AND 1100\n   AND OrganizationLevel = 'District'\n   AND student_group = 'All Students'\n   AND GradeLevel = 'All Grades'\nHAVING COUNT(*) &gt; 1;\nWhich Order do these go in?\nThe list below contains all the possible keywords. We will get to all of them in this workshop.\n\n  WITH cte_name AS ()\n  SELECT DISTINCT\n         column\n         ,AGG_FUNC(column_or_expression), …\n    FROM mytable\n         JOIN another_table\n           ON mytable.column = another_table.column\n   WHERE constraint_expression\nGROUP BY column\n  HAVING constraint_expression\nORDER BY column ASC/DESC\n   LIMIT count;\nLimit the number of results\n\n\nThis is one of those areas where SQL languages will differ.\nMost languages will say “Put the LIMIT keyword after everything else and put the number of rows you want.\nMicrosoft SQL Products will have you put the TOP keyword after the SELECT Statement.\nExamples:\n\n\n-- Most ways\n\nSELECT DISTINCT *\n  FROM \"wera-db\".main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'\n LIMIT 10\n\n-- Microsoft way\n\nSELECT DISTINCT TOP 10 *\n  FROM [wera-db].main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'"
+    "section": "Advanced topics - Having",
+    "text": "Advanced topics - Having\n\nSimilar to WHERE statements, but they are used if you are filtering based off an aggregate function.\nComes after the GROUP BY clause and before the ORDER BY clause.\nIf you need to filter on a row-level criteria, use the WHERE clause.\n\nSELECT COUNT(*) as DistrictCount\n  FROM \"wera-db\".main.enrollment\n WHERE student_count BETWEEN 900 AND 1100\n   AND OrganizationLevel = 'District'\n   AND student_group = 'All Students'\n   AND GradeLevel = 'All Grades'\nHAVING COUNT(*) &gt; 1;"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---which-order-do-these-go-in",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics---which-order-do-these-go-in",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Advanced Topics - Which Order do these go in?",
+    "text": "Advanced Topics - Which Order do these go in?\nThe list below contains all the possible keywords. We will get to all of them in this workshop.\n  WITH cte_name AS ()\n  SELECT DISTINCT\n         column\n         ,AGG_FUNC(column_or_expression), …\n    FROM mytable\n         JOIN another_table\n           ON mytable.column = another_table.column\n   WHERE constraint_expression\nGROUP BY column\n  HAVING constraint_expression\nORDER BY column ASC/DESC\n   LIMIT count;"
+  },
+  {
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---limit-the-number-of-results",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics---limit-the-number-of-results",
+    "title": "WERA 2024 SQL Workshop",
+    "section": "Advanced Topics - Limit the number of results",
+    "text": "Advanced Topics - Limit the number of results\n\n\nThis is one of those areas where SQL languages will differ.\nMost languages will say “Put the LIMIT keyword after everything else and put the number of rows you want.\nMicrosoft SQL Products will have you put the TOP keyword after the SELECT Statement.\n\n-- Most ways\nSELECT DISTINCT *\n  FROM \"wera-db\".main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'\n LIMIT 10\n\n-- Microsoft way\nSELECT DISTINCT TOP 10 *\n  FROM [wera-db].main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'"
   },
   {
     "objectID": "index.html",
@@ -350,80 +420,24 @@
     "text": "Project 3"
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#steps-for-shell-1",
-    "href": "WERA-2024-Intro-SQL.html#steps-for-shell-1",
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics--",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics--",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Steps For Shell",
-    "text": "Steps For Shell\n\nFollow steps 1 through 6 on the DBeaver instructions.\nGo to your web browser of choice (e.g., Chrome, Firefox, Edge)\nGo to https://shell.duckdb.org/.\nEnter the following one at a time.\n\n.files add wera-db.duckdb;\nATTACH 'wera-db.duckdb';\nUSE 'wera-db';"
+    "section": "Advanced topics -",
+    "text": "Advanced topics -\nHaving\n\nSimilar to WHERE statements, but they are used if you are filtering based off an aggregate function.\nComes after the GROUP BY clause and before the ORDER BY clause.\nIf you need to filter on a row-level criteria, use the WHERE clause.\n\nSELECT COUNT(*) as DistrictCount\n  FROM \"wera-db\".main.enrollment\n WHERE student_count BETWEEN 900 AND 1100\n   AND OrganizationLevel = 'District'\n   AND student_group = 'All Students'\n   AND GradeLevel = 'All Grades'\nHAVING COUNT(*) &gt; 1;"
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-2",
-    "href": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-2",
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---1",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics---1",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 2 : Select and From (Part 2)",
-    "text": "Exercise 2 : Select and From (Part 2)\n\n\n\n−+\n05:00\n\n\n\n\nSelect all the rows and columns from the enrollment table.\nWhich school years are included in the enrollment data set?\n\n\nWait, this is the same select syntax reference link as the last slide!"
+    "section": "Advanced Topics -",
+    "text": "Advanced Topics -\nWhich Order do these go in?\nThe list below contains all the possible keywords. We will get to all of them in this workshop.\n  WITH cte_name AS ()\n  SELECT DISTINCT\n         column\n         ,AGG_FUNC(column_or_expression), …\n    FROM mytable\n         JOIN another_table\n           ON mytable.column = another_table.column\n   WHERE constraint_expression\nGROUP BY column\n  HAVING constraint_expression\nORDER BY column ASC/DESC\n   LIMIT count;"
   },
   {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-3",
-    "href": "WERA-2024-Intro-SQL.html#exercise-2-select-and-from-part-3",
+    "objectID": "WERA-2024-Intro-SQL.html#advanced-topics---2",
+    "href": "WERA-2024-Intro-SQL.html#advanced-topics---2",
     "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 2 : Select and From (Part 3)",
-    "text": "Exercise 2 : Select and From (Part 3)\n\n\n\n−+\n05:00\n\n\n\n\nSelect all the rows and columns from the enrollment table.\nWhich school years are included in the enrollment data set?\nSELECT all districts and schools from enrollment without duplicates\n\n\nThis link seems DISTINCT from the other two select syntax reference links."
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-2",
-    "href": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-2",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 3 : WHERE things get interesting! (Part 2)",
-    "text": "Exercise 3 : WHERE things get interesting! (Part 2)\n\n\n\n−+\n05:00\n\n\n\n\nFind all the schools in the Seattle School District.\nFind all schools in the Seattle School District that have “Elementary” in their name.\n\n\nWHERE could a person find a helpful reference for questions LIKE we have above?"
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-3",
-    "href": "WERA-2024-Intro-SQL.html#exercise-3-where-things-get-interesting-part-3",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 3 : WHERE things get interesting! (Part 3)",
-    "text": "Exercise 3 : WHERE things get interesting! (Part 3)\n\n\n\n−+\n05:00\n\n\n\n\nFind all the schools in the Seattle School District.\nFind all schools in the Seattle School District that have “Elementary” in their name.\nFrom that list of schools, make the largest student count be on top. (Extra credit! LIMIT the results to 5)\n\n\nAll these references are completely out of ORDER?\n\n======= ## Exercise 3 : WHERE things get interesting!\n\n\n\n−+\n20:00\n\n\n\n\nFind all the schools in the Seattle School District.\nFind all schools in the Seattle School District that have the name “John” in their name.\nFrom that list of schools, make the largest student count be on top. (There should only be four rows.) &gt;&gt;&gt;&gt;&gt;&gt;&gt; fed0472177510ac2b73489add319bd3b9d3b379d"
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-4-part-2",
-    "href": "WERA-2024-Intro-SQL.html#exercise-4-part-2",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 4 (Part 2)",
-    "text": "Exercise 4 (Part 2)\n\n\n\n−+\n05:00\n\n\n\n\nFind the count of all districts with enrollments between 900 and 1100.\nGive the districts with counts of schools that have populations greater than 1000. &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n\n\nWe can COUNT on this reference being GREATER THAN the last one."
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-4-part-3",
-    "href": "WERA-2024-Intro-SQL.html#exercise-4-part-3",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 4 (Part 3)",
-    "text": "Exercise 4 (Part 3)\n\n\n\n−+\n05:00\n\n\n\n\nFind the count of all districts with enrollments between 900 and 1100.\nGive the districts with counts of schools that have populations greater than 1000.\nGive the number of students by county as reported at the district level.\n\n\nThis is a tricky question, but there has to be SUM operator we can use"
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-5-part-1",
-    "href": "WERA-2024-Intro-SQL.html#exercise-5-part-1",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 5 (Part 1)",
-    "text": "Exercise 5 (Part 1)\n\n\n\n−+\n05:00\n\n\n\n\nUsing your answer to 4.2 as a reference (you can use ours if you didn’t finish), join in to the public directory, find the administrator.\n\n-- Example Syntax from 4.2\n\n  SELECT DistrictName, COUNT(*) as BigSchoolCount\n    FROM \"wera-db\".main.enrollment\n   WHERE student_count &gt; 1000 \n     AND OrganizationLevel = 'School' \n     AND student_group = 'All Students' \n     AND GradeLevel = 'All Grades'\nGROUP BY DistrictName \nORDER BY BigSchoolCount DESC;\n\nFun fact! People who learn SQL are never lonely at lunch because they know how to JOIN tables."
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-5-part-2",
-    "href": "WERA-2024-Intro-SQL.html#exercise-5-part-2",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 5 (Part 2)",
-    "text": "Exercise 5 (Part 2)\n\n\n\n−+\n05:00\n\n\n\n\nUsing your answer to 4.2 as a reference (you can use ours if you didn’t finish), join in to the public directory, find the administrator.\nUsing your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.\n\n\nFun fact! People who learn SQL are never lonely at lunch because they know how to JOIN tables."
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-5-part-3",
-    "href": "WERA-2024-Intro-SQL.html#exercise-5-part-3",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 5 (Part 3)",
-    "text": "Exercise 5 (Part 3)\n\n\n\n−+\n05:00\n\n\n\n\nUsing your answer to 4.2 as a reference (you can use ours if you didn’t finish), join in to the public directory, find the administrator.\nUsing your code from question 1, also find the top five schools by graduation rate that have an enrollment greater than 1000. Be sure to include the school year.\nFind schools that have enrollment but no graduation data. (Fun fact! You can’t use = to find NULL values. There must be some other way to find out what IS NULL. Hmmm…)"
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#exercise-6",
-    "href": "WERA-2024-Intro-SQL.html#exercise-6",
-    "title": "WERA 2024 SQL Workshop",
-    "section": "Exercise 6",
-    "text": "Exercise 6\n\n\n\n−+\n15:00\n\n\n\n\nTake the first query from Exercise 5, remove the order by clause, put it into a CTE, and then select everything from it.\n\n\nSome people really like the CTE, but I prefer the mountains."
+    "section": "Advanced Topics -",
+    "text": "Advanced Topics -\nLimit the number of results\n\n\nThis is one of those areas where SQL languages will differ.\nMost languages will say “Put the LIMIT keyword after everything else and put the number of rows you want.\nMicrosoft SQL Products will have you put the TOP keyword after the SELECT Statement.\n\n-- Most ways\nSELECT DISTINCT *\n  FROM \"wera-db\".main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'\n LIMIT 10\n\n-- Microsoft way\nSELECT DISTINCT TOP 10 *\n  FROM [wera-db].main.enrollment AS e\n WHERE e.SchoolName LIKE '%Jefferson%'"
   }
 ]
