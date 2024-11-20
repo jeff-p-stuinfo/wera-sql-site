@@ -141,7 +141,6 @@ countdown(minutes = 15, seconds = 0, top = 0, bottom = NULL)
 
 [If you can't download or use DBeaver, go to the next slide for a different option.]{style="text-decoration: underline;"}
 
-<<<<<<< HEAD
 1.  Go to DBeaver Community Download: <https://dbeaver.io/download/>
 
 2.  Download it.
@@ -348,7 +347,6 @@ WHERE SchoolName IS NULL
 ```
 
 -   You can also filter something **IS NOT NULL**
-<<<<<<< HEAD
 
 ``` sql
 SELECT DistrictName
@@ -436,11 +434,8 @@ SELECT DISTINCT
        ,SchoolName 
   FROM "wera-db".main.enrollment
  WHERE DistrictName = 'Seattle School District No. 1'
-<<<<<<< HEAD
    AND SchoolName LIKE '%Elementary%';
-=======
-   AND SchoolName LIKE '%John%';
->>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
+
 
 -- Question 3
 SELECT DiSTINCT 
@@ -485,7 +480,6 @@ FROM main.enrollment
 ## GROUP BY
 
 -   Allows for aggregation
-<<<<<<< HEAD
 -   You will need each column that is not aggregated to be in the group by statement.
 
 ``` sql
@@ -708,12 +702,8 @@ ORDER BY BigSchoolCount DESC;
      AND g.Cohort  = 'Four Year'
      AND g.StudentGroupType  LIKE '%All%'
      AND e.student_count > 1000
-<<<<<<< HEAD
 ORDER BY g.GraduationRate DESC    
-=======
-ORDER BY g.GraduationRate    
->>>>>>> fed0472177510ac2b73489add319bd3b9d3b379d
-   
+
 -- Question 3   
 
 SELECT DISTINCT
