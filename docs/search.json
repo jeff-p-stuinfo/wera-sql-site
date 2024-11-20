@@ -347,14 +347,7 @@
     "href": "WERA-2024-Intro-SQL.html#resources-1",
     "title": "How to Start with SQL for Education",
     "section": "Resources",
-    "text": "Resources\nIf you want to learn more:\n\nW3 Schools online tutorials (https://www.w3schools.com/)\nGeeks For Geeks (https://www.geeksforgeeks.org)\nExample Google Search “W3Schools SQL how to execute based off a condition.”"
-  },
-  {
-    "objectID": "WERA-2024-Intro-SQL.html#follow-up-thoughts",
-    "href": "WERA-2024-Intro-SQL.html#follow-up-thoughts",
-    "title": "How to Start with SQL for Education",
-    "section": "Follow-up Thoughts",
-    "text": "Follow-up Thoughts\n\nWhat data questions are do you encounter in your job?\nHow do you think you can answer these questions, or questions like these using SQL now?\nFor example, what types of functions would you use to:\n\nCount how many students are regular attenders\nCalculate discipline rates\nCalculate graduation rates\nAny others?"
+    "text": "Resources\nIf you want to learn more:\n\nW3 Schools online tutorials (https://www.w3schools.com/)\nGeeks For Geeks (https://www.geeksforgeeks.org)\nExample Google Search “W3Schools SQL how to execute based off a condition.” \nWhat data questions are do you encounter in your job?\nHow do you think you can answer these questions, or questions like these using SQL now?\nFor example, what types of functions would you use to:\n\nCount how many students are regular attenders\nCalculate discipline rates\nCalculate graduation rates\nAny others?"
   },
   {
     "objectID": "WERA-2024-Intro-SQL.html#thank-you-for-attending",

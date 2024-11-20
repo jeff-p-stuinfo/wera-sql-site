@@ -22,7 +22,7 @@ about:
 
 -   Please download and set up your copy of DBeaver Community version, then connect it to the DuckDB database file
 -   You can download DBeaver for your own system off of the [DBeaver website](https://dbeaver.io/download/). (Admin access is not required to do the installation)
--   Download the wera-db.duckdb database file
+-   Download the [wera-db.duckdb database file](https://github.com/jeff-p-stuinfo/wera-sql-site/raw/refs/heads/main/assets/data/wera-db.duckdb)
 -   Connect DBeaver
     -   Open DBeaver, if there is a prompt for a Windows Defender exclusion to speed things up, that is up to you. Your faithful workshop presenters did not use that option.\
         ![Screenshot showing the button to add a new database connection](assets/images/new_database_connection.PNG)

@@ -129,7 +129,7 @@ If you want to learn more:
 
 -   We will be using the DBeaver IDE
 -   Our SQL server is built and will be run using DuckDB
--   Set up DBeaver and connect it to the DuckDB file
+-   Set up DBeaver and connect it to the [DuckDB file](https://github.com/jeff-p-stuinfo/wera-sql-site/raw/refs/heads/main/assets/data/wera-db.duckdb)
 
 ## Steps {.scrollable .smaller}
 
@@ -143,7 +143,7 @@ countdown(minutes = 10, seconds = 0, top = 0, bottom = NULL)
 
 3.  Only install it for your account OR just unzip it. 
 
-4.  Download the [wera-db.duckdb database file](jeff-p-stuinfo.github.io/wera-sql-site/assets/data/wera-db.duckdb)
+4.  Download the [wera-db.duckdb database file](https://github.com/jeff-p-stuinfo/wera-sql-site/raw/refs/heads/main/assets/data/wera-db.duckdb)
 
 5.  Open DBeaver.
 
@@ -770,11 +770,12 @@ If you want to learn more:
 
 -   Example Google Search "W3Schools SQL how to execute based off a condition." ![Example](assets/images/W3Schools_Example_Search.png)
 
-## Follow-up Thoughts
-
 -   What data questions are do you encounter in your job?
+
 -   How do you think you can answer these questions, or questions like these using SQL now?
+
 -   For example, what types of functions would you use to:
+
     -   Count how many students are regular attenders
     -   Calculate discipline rates
     -   Calculate graduation rates
