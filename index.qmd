@@ -27,7 +27,7 @@ about:
     -   Open DBeaver, if there is a prompt for a Windows Defender exclusion to speed things up, that is up to you. Your faithful workshop presenters did not use that option.\
         ![Screenshot showing the button to add a new database connection](assets/images/new_database_connection.PNG)
     -   Search for DuckDB, select that option and click next.\
-        ![Image showing how to search for and select DuckDB database type](assets/images/DBeaver_Step9.png)
+        ![Image showing how to search for and select DuckDB database type](assets/images/dbeaver_search_step9.png)
     -   Click the 'Host' option, and open a path the wera-db.duckdb file you downloaded\
         ![Finish the DuckDB connection setup by browsing for and selecting the database file](assets/images/DBeaver_Connection_SetUp.png)
     -   Click 'Finish'. If prompted, download the JDBC driver it requests
